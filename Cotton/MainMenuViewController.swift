@@ -13,25 +13,28 @@ class MainMenuViewController: UIViewController, UICollectionViewDelegate, UIColl
     var tableData: [Product] = []
 
     @IBOutlet weak var shirtCollectionView: UICollectionView!
+    
     fileprivate var toggleFullSize:Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         navigationItem.titleView = UIImageView(image: UIImage(named: "whiteLogoSmall"))
 
+        let types:[TypeAndColor] = [.TNavy, .TBlack, .TankIndigo, .TankBlack, .HoodieBlue]
         tableData = [
-            Product(mainImage: "Code", shirtName: "Code", authorName: "Cat Noone"),
-            Product(mainImage: "Cubic", shirtName: "Cubic", authorName: "Daniel Sutton"),
-            Product(mainImage: "MacDaddy", shirtName: "MacDaddy", authorName: "Lance Jones"),
-            Product(mainImage: "Phoenix", shirtName: "Phoenix", authorName: "Ben Stafford"),
-            Product(mainImage: "SanFran", shirtName: "SanFran", authorName: "The Man and the Mouse"),
-            Product(mainImage: "Solar", shirtName: "Solar", authorName: "Marian Mraz"),
-            Product(mainImage: "Code", shirtName: "Code", authorName: "Cat Noone"),
-            Product(mainImage: "Cubic", shirtName: "Cubic", authorName: "Daniel Sutton"),
-            Product(mainImage: "MacDaddy", shirtName: "MacDaddy", authorName: "Lance Jones"),
-            Product(mainImage: "Phoenix", shirtName: "Phoenix", authorName: "Ben Stafford"),
-            Product(mainImage: "SanFran", shirtName: "SanFran", authorName: "The Man and the Mouse"),
-            Product(mainImage: "Solar", shirtName: "Solar", authorName: "Marian Mraz")
+            Product(detailImage: "Code", shirtName: "Code", authorName: "Cat Noone", hasTypes: types),
+            Product(detailImage: "Cubic", shirtName: "Cubic", authorName: "Daniel Sutton", hasTypes: types),
+            Product(detailImage: "MacDaddy", shirtName: "MacDaddy", authorName: "Lance Jones", hasTypes: types),
+            Product(detailImage: "Phoenix", shirtName: "Phoenix", authorName: "Ben Stafford", hasTypes: types),
+            Product(detailImage: "SanFran", shirtName: "SanFran", authorName: "The Man and the Mouse", hasTypes: types),
+            Product(detailImage: "Solar", shirtName: "Solar", authorName: "Marian Mraz", hasTypes: types),
+            Product(detailImage: "Code", shirtName: "Code", authorName: "Cat Noone", hasTypes: types),
+            Product(detailImage: "Cubic", shirtName: "Cubic", authorName: "Daniel Sutton", hasTypes: types),
+            Product(detailImage: "MacDaddy", shirtName: "MacDaddy", authorName: "Lance Jones", hasTypes: types),
+            Product(detailImage: "Phoenix", shirtName: "Phoenix", authorName: "Ben Stafford", hasTypes: types),
+            Product(detailImage: "SanFran", shirtName: "SanFran", authorName: "The Man and the Mouse", hasTypes: types),
+            Product(detailImage: "Solar", shirtName: "Solar", authorName: "Marian Mraz", hasTypes: types)
         ]
     }
 
@@ -40,6 +43,8 @@ class MainMenuViewController: UIViewController, UICollectionViewDelegate, UIColl
         // Dispose of any resources that can be recreated.
     }
     
+    // MARK: - Collection View Datasource
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return tableData.count
     }
@@ -47,7 +52,7 @@ class MainMenuViewController: UIViewController, UICollectionViewDelegate, UIColl
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "mainCell", for: indexPath) as! DetailCollectionViewCell
         // Set's the labels texts
-        cell.mainImageView.image = tableData[indexPath.row].mainImage
+        cell.mainImageView.image = tableData[indexPath.row].detailImage
         cell.mainImageView.layer.masksToBounds = true
         cell.mainImageView.layer.cornerRadius = 10
         cell.shirtName.text = tableData[indexPath.row].shirtName
@@ -56,8 +61,11 @@ class MainMenuViewController: UIViewController, UICollectionViewDelegate, UIColl
         return cell
     }
     
+    // MARK: - Button Actions
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "productDetailSegue", sender: nil)
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ProductDetailViewController") as! ProductDetailViewController
+        vc.product = tableData[indexPath.row]
+        navigationController!.pushViewController(vc, animated: true)
     }
 
     @IBAction func fullSizedButtonPressed(_ sender: AnyObject) {
@@ -67,19 +75,20 @@ class MainMenuViewController: UIViewController, UICollectionViewDelegate, UIColl
             toggleFullSize = true
         }
 
+        let types:[TypeAndColor] = [.TNavy, .TBlack, .TankIndigo, .TankBlack, .HoodieBlue]
         tableData = [
-            Product(mainImage: "Code", shirtName: "Code", authorName: "Cat Noone", fullSize: toggleFullSize),
-            Product(mainImage: "Cubic", shirtName: "Cubic", authorName: "Daniel Sutton", fullSize: toggleFullSize),
-            Product(mainImage: "MacDaddy", shirtName: "MacDaddy", authorName: "Lance Jones", fullSize: toggleFullSize),
-            Product(mainImage: "Phoenix", shirtName: "Phoenix", authorName: "Ben Stafford", fullSize: toggleFullSize),
-            Product(mainImage: "SanFran", shirtName: "SanFran", authorName: "The Man and the Mouse", fullSize: toggleFullSize),
-            Product(mainImage: "Solar", shirtName: "Solar", authorName: "Marian Mraz", fullSize: toggleFullSize),
-            Product(mainImage: "Code", shirtName: "Code", authorName: "Cat Noone", fullSize: toggleFullSize),
-            Product(mainImage: "Cubic", shirtName: "Cubic", authorName: "Daniel Sutton", fullSize: toggleFullSize),
-            Product(mainImage: "MacDaddy", shirtName: "MacDaddy", authorName: "Lance Jones", fullSize: toggleFullSize),
-            Product(mainImage: "Phoenix", shirtName: "Phoenix", authorName: "Ben Stafford", fullSize: toggleFullSize),
-            Product(mainImage: "SanFran", shirtName: "SanFran", authorName: "The Man and the Mouse", fullSize: toggleFullSize),
-            Product(mainImage: "Solar", shirtName: "Solar", authorName: "Marian Mraz", fullSize: toggleFullSize)
+            Product(detailImage: "Code", shirtName: "Code", authorName: "Cat Noone", fullSize: toggleFullSize, hasTypes: types),
+            Product(detailImage: "Cubic", shirtName: "Cubic", authorName: "Daniel Sutton", fullSize: toggleFullSize, hasTypes: types),
+            Product(detailImage: "MacDaddy", shirtName: "MacDaddy", authorName: "Lance Jones", fullSize: toggleFullSize, hasTypes: types),
+            Product(detailImage: "Phoenix", shirtName: "Phoenix", authorName: "Ben Stafford", fullSize: toggleFullSize, hasTypes: types),
+            Product(detailImage: "SanFran", shirtName: "SanFran", authorName: "The Man and the Mouse", fullSize: toggleFullSize, hasTypes: types),
+            Product(detailImage: "Solar", shirtName: "Solar", authorName: "Marian Mraz", fullSize: toggleFullSize, hasTypes: types),
+            Product(detailImage: "Code", shirtName: "Code", authorName: "Cat Noone", fullSize: toggleFullSize, hasTypes: types),
+            Product(detailImage: "Cubic", shirtName: "Cubic", authorName: "Daniel Sutton", fullSize: toggleFullSize, hasTypes: types),
+            Product(detailImage: "MacDaddy", shirtName: "MacDaddy", authorName: "Lance Jones", fullSize: toggleFullSize, hasTypes: types),
+            Product(detailImage: "Phoenix", shirtName: "Phoenix", authorName: "Ben Stafford", fullSize: toggleFullSize, hasTypes: types),
+            Product(detailImage: "SanFran", shirtName: "SanFran", authorName: "The Man and the Mouse", fullSize: toggleFullSize, hasTypes: types),
+            Product(detailImage: "Solar", shirtName: "Solar", authorName: "Marian Mraz", fullSize: toggleFullSize, hasTypes: types)
         ]
         
         shirtCollectionView.reloadData()

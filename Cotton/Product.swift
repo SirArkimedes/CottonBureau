@@ -8,22 +8,34 @@
 
 import UIKit
 
+public enum TypeAndColor {
+    case TNavy
+    case TBlack
+    case TankIndigo
+    case TankBlack
+    case HoodieBlue
+}
+
 class Product: NSObject {
     
-    var mainImage:UIImage
-    
+    var fullImage:UIImage
+    var detailImage:UIImage
     var shirtName:String
-    
     var authorName:String
     
-    init(mainImage:String, shirtName:String, authorName:String, fullSize: Bool = false) {
-        if fullSize {
-           self.mainImage = UIImage(named: mainImage + "Full")!
-        } else {
-            self.mainImage = UIImage(named: mainImage)!
-        }
+    var hasTypes:[TypeAndColor] = []
+    
+    init(detailImage:String,
+         shirtName:String,
+         authorName:String,
+         fullSize: Bool = false,
+         hasTypes:[TypeAndColor]) {
+        
+        self.fullImage = UIImage(named: detailImage + "Full")!
+        self.detailImage = UIImage(named: detailImage)!
         self.shirtName = shirtName
         self.authorName = authorName
+        self.hasTypes = hasTypes
     }
 
 }

@@ -8,18 +8,24 @@
 
 import UIKit
 
-@IBDesignable
 class ProductDetailViewController: UIViewController {
-
+    
     @IBOutlet weak var scrollView: UIScrollView!
+    
+    @IBOutlet weak var shirtImageView: UIImageView!
+    @IBOutlet weak var colorSwitcherContainer: UIView!
+    
+    var product:Product!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         navigationItem.titleView = UIImageView(image: UIImage(named: "whiteLogoSmall"))
         
-        let view = Bundle.main.loadNibNamed("ProductDetailScrollContent", owner: self, options: nil)![0] as! UIView
-        scrollView.addSubview(view)
+        shirtImageView.image = product.fullImage
+        
+        // Setup Color switcher
+        
     }
 
     override func didReceiveMemoryWarning() {
