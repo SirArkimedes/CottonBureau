@@ -144,7 +144,7 @@
                                         </constraints>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JC7-35-qpi">
-                                        <color key="backgroundColor" red="0.95686274510000002" green="0.38823529410000002" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="Uky-Nc-d21"/>
                                         </constraints>
