@@ -18,18 +18,18 @@ class MainMenuViewController: UIViewController, UICollectionViewDelegate, UIColl
         navigationItem.titleView = UIImageView(image: UIImage(named: "whiteLogoSmall"))
 
         tableData = [
-            Product(mainImage: UIImage(named: "Code")!, shirtName: "Code", authorName: "Cat Noone"),
-            Product(mainImage: UIImage(named: "Cubic")!, shirtName: "Cubic", authorName: "Daniel Sutton"),
-            Product(mainImage: UIImage(named: "MacDaddy")!, shirtName: "MacDaddy", authorName: "Lance Jones"),
-            Product(mainImage: UIImage(named: "Phoenix")!, shirtName: "Phoenix", authorName: "Ben Stafford"),
-            Product(mainImage: UIImage(named: "SanFran")!, shirtName: "SanFran", authorName: "The Man and the Mouse"),
-            Product(mainImage: UIImage(named: "Solar")!, shirtName: "Solar", authorName: "Marian Mraz"),
-            Product(mainImage: UIImage(named: "Code")!, shirtName: "Code", authorName: "Cat Noone"),
-            Product(mainImage: UIImage(named: "Cubic")!, shirtName: "Cubic", authorName: "Daniel Sutton"),
-            Product(mainImage: UIImage(named: "MacDaddy")!, shirtName: "MacDaddy", authorName: "Lance Jones"),
-            Product(mainImage: UIImage(named: "Phoenix")!, shirtName: "Phoenix", authorName: "Ben Stafford"),
-            Product(mainImage: UIImage(named: "SanFran")!, shirtName: "SanFran", authorName: "The Man and the Mouse"),
-            Product(mainImage: UIImage(named: "Solar")!, shirtName: "Solar", authorName: "Marian Mraz")
+            Product(mainImage: "Code", shirtName: "Code", authorName: "Cat Noone"),
+            Product(mainImage: "Cubic", shirtName: "Cubic", authorName: "Daniel Sutton"),
+            Product(mainImage: "MacDaddy", shirtName: "MacDaddy", authorName: "Lance Jones"),
+            Product(mainImage: "Phoenix", shirtName: "Phoenix", authorName: "Ben Stafford"),
+            Product(mainImage: "SanFran", shirtName: "SanFran", authorName: "The Man and the Mouse"),
+            Product(mainImage: "Solar", shirtName: "Solar", authorName: "Marian Mraz"),
+            Product(mainImage: "Code", shirtName: "Code", authorName: "Cat Noone"),
+            Product(mainImage: "Cubic", shirtName: "Cubic", authorName: "Daniel Sutton"),
+            Product(mainImage: "MacDaddy", shirtName: "MacDaddy", authorName: "Lance Jones"),
+            Product(mainImage: "Phoenix", shirtName: "Phoenix", authorName: "Ben Stafford"),
+            Product(mainImage: "SanFran", shirtName: "SanFran", authorName: "The Man and the Mouse"),
+            Product(mainImage: "Solar", shirtName: "Solar", authorName: "Marian Mraz")
         ]
     }
 

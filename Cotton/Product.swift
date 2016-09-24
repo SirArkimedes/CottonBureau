@@ -16,8 +16,8 @@ class Product: NSObject {
     
     var authorName:String
     
-    init(mainImage:UIImage, shirtName:String, authorName:String) {
-        self.mainImage = mainImage
+    init(mainImage:String, shirtName:String, authorName:String) {
+        self.mainImage = UIImage(named: mainImage)!
         self.shirtName = shirtName
         self.authorName = authorName
     }
