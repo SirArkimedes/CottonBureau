@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainCollectionViewCell: UICollectionViewCell {
+class DetailCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var mainImageView: UIImageView!
     @IBOutlet weak var shirtName: UILabel!
