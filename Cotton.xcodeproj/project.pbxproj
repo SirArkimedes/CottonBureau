@@ -1,0 +1,427 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4D2D7F7C1D9615710043AFCA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2D7F7B1D9615710043AFCA /* AppDelegate.swift */; };
+		4D2D7F7E1D9615710043AFCA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2D7F7D1D9615710043AFCA /* ViewController.swift */; };
+		4D2D7F811D9615710043AFCA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D2D7F7F1D9615710043AFCA /* Main.storyboard */; };
+		4D2D7F831D9615710043AFCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D2D7F821D9615710043AFCA /* Assets.xcassets */; };
+		4D2D7F861D9615710043AFCA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D2D7F841D9615710043AFCA /* LaunchScreen.storyboard */; };
+		4D2D7F911D9615710043AFCA /* CottonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2D7F901D9615710043AFCA /* CottonTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4D2D7F8D1D9615710043AFCA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4D2D7F701D9615710043AFCA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4D2D7F771D9615710043AFCA;
+			remoteInfo = Cotton;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4D2D7F781D9615710043AFCA /* Cotton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cotton.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D2D7F7B1D9615710043AFCA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4D2D7F7D1D9615710043AFCA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4D2D7F801D9615710043AFCA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4D2D7F821D9615710043AFCA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4D2D7F851D9615710043AFCA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4D2D7F871D9615710043AFCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D2D7F8C1D9615710043AFCA /* CottonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CottonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D2D7F901D9615710043AFCA /* CottonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CottonTests.swift; sourceTree = "<group>"; };
+		4D2D7F921D9615710043AFCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4D2D7F751D9615710043AFCA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D2D7F891D9615710043AFCA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4D2D7F6F1D9615710043AFCA = {
+			isa = PBXGroup;
+			children = (
+				4D2D7F7A1D9615710043AFCA /* Cotton */,
+				4D2D7F8F1D9615710043AFCA /* CottonTests */,
+				4D2D7F791D9615710043AFCA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4D2D7F791D9615710043AFCA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4D2D7F781D9615710043AFCA /* Cotton.app */,
+				4D2D7F8C1D9615710043AFCA /* CottonTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4D2D7F7A1D9615710043AFCA /* Cotton */ = {
+			isa = PBXGroup;
+			children = (
+				4D2D7F7B1D9615710043AFCA /* AppDelegate.swift */,
+				4D2D7F7D1D9615710043AFCA /* ViewController.swift */,
+				4D2D7F7F1D9615710043AFCA /* Main.storyboard */,
+				4D2D7F821D9615710043AFCA /* Assets.xcassets */,
+				4D2D7F841D9615710043AFCA /* LaunchScreen.storyboard */,
+				4D2D7F871D9615710043AFCA /* Info.plist */,
+			);
+			path = Cotton;
+			sourceTree = "<group>";
+		};
+		4D2D7F8F1D9615710043AFCA /* CottonTests */ = {
+			isa = PBXGroup;
+			children = (
+				4D2D7F901D9615710043AFCA /* CottonTests.swift */,
+				4D2D7F921D9615710043AFCA /* Info.plist */,
+			);
+			path = CottonTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4D2D7F771D9615710043AFCA /* Cotton */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4D2D7F951D9615710043AFCA /* Build configuration list for PBXNativeTarget "Cotton" */;
+			buildPhases = (
+				4D2D7F741D9615710043AFCA /* Sources */,
+				4D2D7F751D9615710043AFCA /* Frameworks */,
+				4D2D7F761D9615710043AFCA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Cotton;
+			productName = Cotton;
+			productReference = 4D2D7F781D9615710043AFCA /* Cotton.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4D2D7F8B1D9615710043AFCA /* CottonTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4D2D7F981D9615710043AFCA /* Build configuration list for PBXNativeTarget "CottonTests" */;
+			buildPhases = (
+				4D2D7F881D9615710043AFCA /* Sources */,
+				4D2D7F891D9615710043AFCA /* Frameworks */,
+				4D2D7F8A1D9615710043AFCA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4D2D7F8E1D9615710043AFCA /* PBXTargetDependency */,
+			);
+			name = CottonTests;
+			productName = CottonTests;
+			productReference = 4D2D7F8C1D9615710043AFCA /* CottonTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4D2D7F701D9615710043AFCA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = Masamune;
+				TargetAttributes = {
+					4D2D7F771D9615710043AFCA = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = ZP73CTVZZ8;
+						ProvisioningStyle = Automatic;
+					};
+					4D2D7F8B1D9615710043AFCA = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = ZP73CTVZZ8;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 4D2D7F771D9615710043AFCA;
+					};
+				};
+			};
+			buildConfigurationList = 4D2D7F731D9615710043AFCA /* Build configuration list for PBXProject "Cotton" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4D2D7F6F1D9615710043AFCA;
+			productRefGroup = 4D2D7F791D9615710043AFCA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4D2D7F771D9615710043AFCA /* Cotton */,
+				4D2D7F8B1D9615710043AFCA /* CottonTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4D2D7F761D9615710043AFCA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D2D7F861D9615710043AFCA /* LaunchScreen.storyboard in Resources */,
+				4D2D7F831D9615710043AFCA /* Assets.xcassets in Resources */,
+				4D2D7F811D9615710043AFCA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D2D7F8A1D9615710043AFCA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4D2D7F741D9615710043AFCA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D2D7F7E1D9615710043AFCA /* ViewController.swift in Sources */,
+				4D2D7F7C1D9615710043AFCA /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D2D7F881D9615710043AFCA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D2D7F911D9615710043AFCA /* CottonTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4D2D7F8E1D9615710043AFCA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4D2D7F771D9615710043AFCA /* Cotton */;
+			targetProxy = 4D2D7F8D1D9615710043AFCA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4D2D7F7F1D9615710043AFCA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4D2D7F801D9615710043AFCA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4D2D7F841D9615710043AFCA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4D2D7F851D9615710043AFCA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4D2D7F931D9615710043AFCA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4D2D7F941D9615710043AFCA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4D2D7F961D9615710043AFCA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = ZP73CTVZZ8;
+				INFOPLIST_FILE = Cotton/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.masamune.Cotton;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		4D2D7F971D9615710043AFCA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = ZP73CTVZZ8;
+				INFOPLIST_FILE = Cotton/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.masamune.Cotton;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		4D2D7F991D9615710043AFCA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = ZP73CTVZZ8;
+				INFOPLIST_FILE = CottonTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.masamune.CottonTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cotton.app/Cotton";
+			};
+			name = Debug;
+		};
+		4D2D7F9A1D9615710043AFCA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = ZP73CTVZZ8;
+				INFOPLIST_FILE = CottonTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.masamune.CottonTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cotton.app/Cotton";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4D2D7F731D9615710043AFCA /* Build configuration list for PBXProject "Cotton" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D2D7F931D9615710043AFCA /* Debug */,
+				4D2D7F941D9615710043AFCA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4D2D7F951D9615710043AFCA /* Build configuration list for PBXNativeTarget "Cotton" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D2D7F961D9615710043AFCA /* Debug */,
+				4D2D7F971D9615710043AFCA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		4D2D7F981D9615710043AFCA /* Build configuration list for PBXNativeTarget "CottonTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D2D7F991D9615710043AFCA /* Debug */,
+				4D2D7F9A1D9615710043AFCA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4D2D7F701D9615710043AFCA /* Project object */;
+}
