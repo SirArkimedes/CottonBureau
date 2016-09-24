@@ -3,8 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
-        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -24,6 +22,9 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="FcT-3J-tGm">
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.90000000000000002" height="1"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="569" id="L2v-Y6-AQN"/>
+                                </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="cyF-QV-gZS">
                                     <size key="itemSize" width="187" height="218"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -81,38 +82,19 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="ku3-WV-6IC"/>
                                 </connections>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="miP-EL-xd1" customClass="CategorySwitcher" customModule="Cotton" customModuleProvider="target">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="135" id="XZM-jx-ONc"/>
-                                    <constraint firstAttribute="height" constant="30" id="zjM-Wu-ZFw"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="11"/>
-                                <state key="normal" title="TEE">
-                                    <color key="titleColor" red="0.95686274510000002" green="0.38823529410000002" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7c3-7X-tmX" customClass="CategorySwitcher" customModule="Cotton" customModuleProvider="target">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="135" id="Xix-H1-E6T"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="11"/>
-                                <state key="normal" title="DETAIL">
-                                    <color key="titleColor" red="0.95686274510000002" green="0.38823529410000002" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kg8-oa-XPL" customClass="CategorySwitcher" customModule="Cotton" customModuleProvider="target">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="miP-EL-xd1" firstAttribute="baseline" secondItem="7c3-7X-tmX" secondAttribute="firstBaseline" id="4dC-P6-RBH"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="7c3-7X-tmX" secondAttribute="trailing" constant="37" id="6nT-T8-6OB"/>
-                            <constraint firstItem="7c3-7X-tmX" firstAttribute="baseline" secondItem="miP-EL-xd1" secondAttribute="firstBaseline" id="7tC-7C-cjI"/>
-                            <constraint firstAttribute="trailing" secondItem="FcT-3J-tGm" secondAttribute="trailing" id="8dK-x1-iDU"/>
-                            <constraint firstItem="FcT-3J-tGm" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="KsT-dB-69h"/>
-                            <constraint firstItem="miP-EL-xd1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="37" id="MJd-I8-GUn"/>
-                            <constraint firstItem="FcT-3J-tGm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ZGT-l1-nPI"/>
-                            <constraint firstItem="FcT-3J-tGm" firstAttribute="top" secondItem="7c3-7X-tmX" secondAttribute="bottom" id="fg5-Bc-Ibb"/>
-                            <constraint firstItem="miP-EL-xd1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="4" id="mmW-Xj-jlY"/>
-                            <constraint firstItem="miP-EL-xd1" firstAttribute="top" secondItem="7c3-7X-tmX" secondAttribute="top" id="qLw-Na-kLm"/>
+                            <constraint firstItem="Kg8-oa-XPL" firstAttribute="centerX" secondItem="FcT-3J-tGm" secondAttribute="centerX" id="20y-h5-vk3"/>
+                            <constraint firstItem="FcT-3J-tGm" firstAttribute="top" secondItem="Kg8-oa-XPL" secondAttribute="bottom" id="FUU-PR-o95"/>
+                            <constraint firstItem="FcT-3J-tGm" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="Ic0-mO-aWi"/>
+                            <constraint firstItem="Kg8-oa-XPL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="1" id="hJz-pw-B6Q"/>
+                            <constraint firstItem="FcT-3J-tGm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hWa-ZX-cea"/>
+                            <constraint firstAttribute="trailing" secondItem="FcT-3J-tGm" secondAttribute="trailing" id="n8Y-jH-PiT"/>
+                            <constraint firstItem="Kg8-oa-XPL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="65" id="ygR-QA-DAL"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="8LH-cf-q3d"/>

@@ -7,30 +7,51 @@
 //
 
 import UIKit
+import SnapKit
 
 class CategorySwitcher: UIButton {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
-    
     required public init?(coder aDecoder: NSCoder) {
         
         super.init(coder: aDecoder)
         
-        let maskPath = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: ([.topLeft, .bottomRight]), cornerRadii: CGSize(width: 5, height: 5))
-        let maskLayer = CAShapeLayer()
-        maskLayer.frame = self.bounds
-        maskLayer.path = maskPath.cgPath
-        self.layer.mask = maskLayer
-   
-        self.layer.borderWidth = 3
-        self.layer.masksToBounds = true
-        self.layer.borderColor =  #colorLiteral(red: 0.9568627451, green: 0.3882352941, blue: 0.3254901961, alpha: 1).cgColor
+        let teeMaskPath = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: ([.topLeft, .bottomRight]), cornerRadii: CGSize(width: 5, height: 5))
+        let teemaskLayer = CAShapeLayer()
+        teemaskLayer.frame = self.bounds
+        teemaskLayer.path = teeMaskPath.cgPath
+        
+        let teeButton = UIButton()
+        teeButton.titleLabel?.text = "TEE"
+        teeButton.titleLabel?.adjustsFontSizeToFitWidth = true
+        teeButton.layer.mask = teemaskLayer
+        teeButton.layer.borderWidth = 3
+        teeButton.layer.masksToBounds = true
+        teeButton.layer.borderColor = #colorLiteral(red: 0.9568627451, green: 0.3882352941, blue: 0.3254901961, alpha: 1).cgColor
+        addSubview(teeButton)
+        teeButton.snp.makeConstraints { (ConstraintMaker) in
+            ConstraintMaker.left.equalTo(self.snp.left)
+            ConstraintMaker.right.equalTo(self.bounds.width / 2)
+            ConstraintMaker.top.bottom.equalTo(self.snp.top)
+        }
+        
+        let detailMaskPath = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: ([.topLeft, .bottomRight]), cornerRadii: CGSize(width: 5, height: 5))
+        let detailmaskLayer = CAShapeLayer()
+        detailmaskLayer.frame = self.bounds
+        detailmaskLayer.path = detailMaskPath.cgPath
+        
+        let detailButton = UIButton()
+        detailButton.titleLabel?.text = "DETAIL"
+        detailButton.titleLabel?.adjustsFontSizeToFitWidth = true
+        detailButton.layer.mask = detailmaskLayer
+        detailButton.layer.borderWidth = 3
+        detailButton.layer.masksToBounds = true
+        detailButton.layer.borderColor = #colorLiteral(red: 0.9568627451, green: 0.3882352941, blue: 0.3254901961, alpha: 1).cgColor
+        addSubview(detailButton)
+        detailButton.snp.makeConstraints { (ConstraintMaker) in
+            ConstraintMaker.right.equalTo(self.snp.right)
+            ConstraintMaker.top.bottom.equalTo(self)
+            ConstraintMaker.left.equalTo(self.bounds.width / 2)
+        }
         
     }
 
