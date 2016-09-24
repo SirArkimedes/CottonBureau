@@ -1,0 +1,17 @@
+//
+//  MainCollectionViewCell.swift
+//  Cotton
+//
+//  Created by Michael Blades on 23/09/2016.
+//  Copyright © 2016 Masamune. All rights reserved.
+//
+
+import UIKit
+
+class MainCollectionViewCell: UICollectionViewCell {
+    
+    @IBOutlet weak var mainImageView: UIImageView!
+    @IBOutlet weak var middleLabel: UILabel!
+    
+    
+}
