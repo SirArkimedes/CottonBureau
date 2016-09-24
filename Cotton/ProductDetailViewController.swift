@@ -20,5 +20,9 @@ class ProductDetailViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBAction func dismissViewController(_ sender: AnyObject) {
+        dismiss(animated: true, completion: nil)
+    }
 
 }

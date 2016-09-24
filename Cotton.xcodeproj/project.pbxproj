@@ -149,7 +149,7 @@
 				TargetAttributes = {
 					4D2D7F771D9615710043AFCA = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = ZP73CTVZZ8;
+						DevelopmentTeam = Z2J2Z8J6Q2;
 						ProvisioningStyle = Automatic;
 					};
 					4D2D7F8B1D9615710043AFCA = {
@@ -345,7 +345,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = ZP73CTVZZ8;
+				DEVELOPMENT_TEAM = Z2J2Z8J6Q2;
 				INFOPLIST_FILE = Cotton/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.masamune.Cotton;
@@ -358,7 +358,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = ZP73CTVZZ8;
+				DEVELOPMENT_TEAM = Z2J2Z8J6Q2;
 				INFOPLIST_FILE = Cotton/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.masamune.Cotton;
