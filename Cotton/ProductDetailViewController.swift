@@ -8,12 +8,18 @@
 
 import UIKit
 
+@IBDesignable
 class ProductDetailViewController: UIViewController {
 
+    @IBOutlet weak var scrollView: UIScrollView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         navigationItem.titleView = UIImageView(image: UIImage(named: "whiteLogoSmall"))
+        
+        let view = Bundle.main.loadNibNamed("ProductDetailScrollContent", owner: self, options: nil)![0] as! UIView
+        scrollView.addSubview(view)
     }
 
     override func didReceiveMemoryWarning() {
