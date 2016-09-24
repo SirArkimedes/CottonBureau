@@ -16,6 +16,7 @@
 		4D2D7FA01D961C700043AFCA /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2D7F9F1D961C700043AFCA /* ProductDetailViewController.swift */; };
 		4D8C6F6B1D96560B007F2D97 /* ProductDetailScrollContent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D8C6F6A1D96560B007F2D97 /* ProductDetailScrollContent.xib */; };
 		4D8C6F6D1D965A0F007F2D97 /* DetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8C6F6C1D965A0F007F2D97 /* DetailCollectionViewCell.swift */; };
+		60389DBC1D96E9220089CC6F /* CategorySwitcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60389DBB1D96E9220089CC6F /* CategorySwitcher.swift */; };
 		60555ECB1D964B57000EAD2B /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60555ECA1D964B57000EAD2B /* Product.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,7 @@
 		4D2D7F9F1D961C700043AFCA /* ProductDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 		4D8C6F6A1D96560B007F2D97 /* ProductDetailScrollContent.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductDetailScrollContent.xib; sourceTree = "<group>"; };
 		4D8C6F6C1D965A0F007F2D97 /* DetailCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailCollectionViewCell.swift; sourceTree = "<group>"; };
+		60389DBB1D96E9220089CC6F /* CategorySwitcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategorySwitcher.swift; sourceTree = "<group>"; };
 		60555ECA1D964B57000EAD2B /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				4D2D7F7B1D9615710043AFCA /* AppDelegate.swift */,
+				60389DBB1D96E9220089CC6F /* CategorySwitcher.swift */,
 				4D2D7F9D1D9618430043AFCA /* MainMenuViewController.swift */,
 				4D8C6F6C1D965A0F007F2D97 /* DetailCollectionViewCell.swift */,
 				4D8C6F6A1D96560B007F2D97 /* ProductDetailScrollContent.xib */,
@@ -214,6 +217,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60389DBC1D96E9220089CC6F /* CategorySwitcher.swift in Sources */,
 				4D2D7F9E1D9618430043AFCA /* MainMenuViewController.swift in Sources */,
 				4D2D7F7C1D9615710043AFCA /* AppDelegate.swift in Sources */,
 				60555ECB1D964B57000EAD2B /* Product.swift in Sources */,

@@ -3,6 +3,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -79,22 +81,41 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="ku3-WV-6IC"/>
                                 </connections>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="miP-EL-xd1" customClass="CategorySwitcher" customModule="Cotton" customModuleProvider="target">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="135" id="XZM-jx-ONc"/>
+                                    <constraint firstAttribute="height" constant="30" id="zjM-Wu-ZFw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="11"/>
+                                <state key="normal" title="TEE">
+                                    <color key="titleColor" red="0.95686274510000002" green="0.38823529410000002" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7c3-7X-tmX" customClass="CategorySwitcher" customModule="Cotton" customModuleProvider="target">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="135" id="Xix-H1-E6T"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="11"/>
+                                <state key="normal" title="DETAIL">
+                                    <color key="titleColor" red="0.95686274510000002" green="0.38823529410000002" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="FcT-3J-tGm" secondAttribute="bottom" id="G65-td-Li8"/>
-                            <constraint firstItem="FcT-3J-tGm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ZEe-uB-eTb"/>
-                            <constraint firstItem="FcT-3J-tGm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="hfN-I8-ZfD"/>
-                            <constraint firstAttribute="trailing" secondItem="FcT-3J-tGm" secondAttribute="trailing" id="unu-0o-Ix3"/>
+                            <constraint firstItem="miP-EL-xd1" firstAttribute="baseline" secondItem="7c3-7X-tmX" secondAttribute="firstBaseline" id="4dC-P6-RBH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7c3-7X-tmX" secondAttribute="trailing" constant="37" id="6nT-T8-6OB"/>
+                            <constraint firstItem="7c3-7X-tmX" firstAttribute="baseline" secondItem="miP-EL-xd1" secondAttribute="firstBaseline" id="7tC-7C-cjI"/>
+                            <constraint firstAttribute="trailing" secondItem="FcT-3J-tGm" secondAttribute="trailing" id="8dK-x1-iDU"/>
+                            <constraint firstItem="FcT-3J-tGm" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="KsT-dB-69h"/>
+                            <constraint firstItem="miP-EL-xd1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="37" id="MJd-I8-GUn"/>
+                            <constraint firstItem="FcT-3J-tGm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ZGT-l1-nPI"/>
+                            <constraint firstItem="FcT-3J-tGm" firstAttribute="top" secondItem="7c3-7X-tmX" secondAttribute="bottom" id="fg5-Bc-Ibb"/>
+                            <constraint firstItem="miP-EL-xd1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="4" id="mmW-Xj-jlY"/>
+                            <constraint firstItem="miP-EL-xd1" firstAttribute="top" secondItem="7c3-7X-tmX" secondAttribute="top" id="qLw-Na-kLm"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="8LH-cf-q3d">
-                        <barButtonItem key="rightBarButtonItem" image="Expand" id="pHW-lM-cd9">
-                            <connections>
-                                <action selector="fullSizedButtonPressed:" destination="BYZ-38-t0r" id="8Zb-aT-X6M"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="8LH-cf-q3d"/>
                     <connections>
                         <outlet property="shirtCollectionView" destination="FcT-3J-tGm" id="2ET-Z6-jiA"/>
                     </connections>
@@ -151,7 +172,4 @@
             <point key="canvasLocation" x="1568.8" y="698.5007496251875"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="Expand" width="16" height="16"/>
-    </resources>
 </document>

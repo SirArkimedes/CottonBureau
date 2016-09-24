@@ -62,7 +62,7 @@ class MainMenuViewController: UIViewController, UICollectionViewDelegate, UIColl
         } else {
             toggleFullSize = true
         }
-        
+
         tableData = [
             Product(mainImage: "Code", shirtName: "Code", authorName: "Cat Noone", fullSize: toggleFullSize),
             Product(mainImage: "Cubic", shirtName: "Cubic", authorName: "Daniel Sutton", fullSize: toggleFullSize),
