@@ -55,6 +55,10 @@ class MainMenuViewController: UIViewController, UICollectionViewDelegate, UIColl
         // Return our new cell for display
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "productDetailSegue", sender: nil)
+    }
 
     @IBAction func fullSizedButtonPressed(_ sender: AnyObject) {
         if toggleFullSize {
@@ -80,4 +84,5 @@ class MainMenuViewController: UIViewController, UICollectionViewDelegate, UIColl
         
         shirtCollectionView.reloadData()
     }
+    
 }

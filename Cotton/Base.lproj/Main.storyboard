@@ -23,7 +23,7 @@
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.90000000000000002" height="1"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="569" id="L2v-Y6-AQN"/>
+                                    <constraint firstAttribute="height" constant="569" id="kRD-rv-jbO"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="cyF-QV-gZS">
                                     <size key="itemSize" width="187" height="218"/>
@@ -73,7 +73,6 @@
                                             <outlet property="authorName" destination="ro7-st-4AG" id="2Yg-Zg-5VZ"/>
                                             <outlet property="mainImageView" destination="6o8-H9-p2d" id="MaO-2W-96o"/>
                                             <outlet property="shirtName" destination="9Z2-dS-0eo" id="sjo-ax-x1P"/>
-                                            <segue destination="lHR-o9-Ukt" kind="show" identifier="productDetailSegue" id="XCP-xQ-hx3"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -88,18 +87,19 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Kg8-oa-XPL" firstAttribute="centerX" secondItem="FcT-3J-tGm" secondAttribute="centerX" id="20y-h5-vk3"/>
-                            <constraint firstItem="FcT-3J-tGm" firstAttribute="top" secondItem="Kg8-oa-XPL" secondAttribute="bottom" id="FUU-PR-o95"/>
-                            <constraint firstItem="FcT-3J-tGm" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="Ic0-mO-aWi"/>
-                            <constraint firstItem="Kg8-oa-XPL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="1" id="hJz-pw-B6Q"/>
-                            <constraint firstItem="FcT-3J-tGm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hWa-ZX-cea"/>
-                            <constraint firstAttribute="trailing" secondItem="FcT-3J-tGm" secondAttribute="trailing" id="n8Y-jH-PiT"/>
-                            <constraint firstItem="Kg8-oa-XPL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="65" id="ygR-QA-DAL"/>
+                            <constraint firstItem="Kg8-oa-XPL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="65" id="HBR-HU-tln"/>
+                            <constraint firstItem="FcT-3J-tGm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="XWO-9d-oeG"/>
+                            <constraint firstAttribute="trailing" secondItem="FcT-3J-tGm" secondAttribute="trailing" id="gUT-PG-9Pg"/>
+                            <constraint firstItem="Kg8-oa-XPL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="1" id="gbs-ma-tqt"/>
+                            <constraint firstItem="FcT-3J-tGm" firstAttribute="top" secondItem="Kg8-oa-XPL" secondAttribute="bottom" id="jaZ-E4-JwR"/>
+                            <constraint firstItem="Kg8-oa-XPL" firstAttribute="centerX" secondItem="FcT-3J-tGm" secondAttribute="centerX" id="nbD-rj-pZ6"/>
+                            <constraint firstItem="FcT-3J-tGm" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="pwM-fx-qi3"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="8LH-cf-q3d"/>
                     <connections>
                         <outlet property="shirtCollectionView" destination="FcT-3J-tGm" id="2ET-Z6-jiA"/>
+                        <segue destination="lHR-o9-Ukt" kind="show" identifier="productDetailSegue" id="Uon-ph-AaA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
