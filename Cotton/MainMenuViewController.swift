@@ -24,18 +24,18 @@ class MainMenuViewController: UIViewController, UICollectionViewDelegate, UIColl
         navigationItem.titleView = UIImageView(image: UIImage(named: "whiteLogoSmall"))
 
         tableData = [
-            MyData(mainImage: UIImage(named: "Code")!, shirtName: "Code", authorName: "Daniel Sutton"),
+            MyData(mainImage: UIImage(named: "Code")!, shirtName: "Code", authorName: "Cat Noone"),
             MyData(mainImage: UIImage(named: "Cubic")!, shirtName: "Cubic", authorName: "Daniel Sutton"),
-            MyData(mainImage: UIImage(named: "MacDaddy")!, shirtName: "MacDaddy", authorName: "Daniel Sutton"),
-            MyData(mainImage: UIImage(named: "Phoenix")!, shirtName: "Phoenix", authorName: "Daniel Sutton"),
-            MyData(mainImage: UIImage(named: "SanFran")!, shirtName: "SanFran", authorName: "Daniel Sutton"),
-            MyData(mainImage: UIImage(named: "Solar")!, shirtName: "Solar", authorName: "Daniel Sutton"),
-            MyData(mainImage: UIImage(named: "Code")!, shirtName: "Code", authorName: "Daniel Sutton"),
+            MyData(mainImage: UIImage(named: "MacDaddy")!, shirtName: "MacDaddy", authorName: "Lance Jones"),
+            MyData(mainImage: UIImage(named: "Phoenix")!, shirtName: "Phoenix", authorName: "Ben Stafford"),
+            MyData(mainImage: UIImage(named: "SanFran")!, shirtName: "SanFran", authorName: "The Man and the Mouse"),
+            MyData(mainImage: UIImage(named: "Solar")!, shirtName: "Solar", authorName: "Marian Mraz"),
+            MyData(mainImage: UIImage(named: "Code")!, shirtName: "Code", authorName: "Cat Noone"),
             MyData(mainImage: UIImage(named: "Cubic")!, shirtName: "Cubic", authorName: "Daniel Sutton"),
-            MyData(mainImage: UIImage(named: "MacDaddy")!, shirtName: "MacDaddy", authorName: "Daniel Sutton"),
-            MyData(mainImage: UIImage(named: "Phoenix")!, shirtName: "Phoenix", authorName: "Daniel Sutton"),
-            MyData(mainImage: UIImage(named: "SanFran")!, shirtName: "SanFran", authorName: "Daniel Sutton"),
-            MyData(mainImage: UIImage(named: "Solar")!, shirtName: "Solar", authorName: "Daniel Sutton"),
+            MyData(mainImage: UIImage(named: "MacDaddy")!, shirtName: "MacDaddy", authorName: "Lance Jones"),
+            MyData(mainImage: UIImage(named: "Phoenix")!, shirtName: "Phoenix", authorName: "Ben Stafford"),
+            MyData(mainImage: UIImage(named: "SanFran")!, shirtName: "SanFran", authorName: "The Man and the Mouse"),
+            MyData(mainImage: UIImage(named: "Solar")!, shirtName: "Solar", authorName: "Marian Mraz"),
         ]
     }
 
@@ -52,6 +52,8 @@ class MainMenuViewController: UIViewController, UICollectionViewDelegate, UIColl
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "mainCell", for: indexPath) as! MainCollectionViewCell
         // Set's the labels texts
         cell.mainImageView.image = tableData[indexPath.row].mainImage
+        cell.mainImageView.layer.masksToBounds = true
+        cell.mainImageView.layer.cornerRadius = 10
         cell.shirtName.text = tableData[indexPath.row].shirtName
         cell.authorName.text = "By: " + tableData[indexPath.row].authorName
         // Return our new cell for display
