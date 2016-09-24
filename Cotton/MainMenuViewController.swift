@@ -12,6 +12,8 @@ class MainMenuViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationItem.titleView = UIImageView(image: UIImage(named: "whiteLogoSmall"))
 
         // Do any additional setup after loading the view.
     }
