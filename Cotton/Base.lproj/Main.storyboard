@@ -88,7 +88,16 @@
                             <constraint firstAttribute="trailing" secondItem="FcT-3J-tGm" secondAttribute="trailing" id="unu-0o-Ix3"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="8LH-cf-q3d"/>
+                    <navigationItem key="navigationItem" id="8LH-cf-q3d">
+                        <barButtonItem key="rightBarButtonItem" image="Expand" id="pHW-lM-cd9">
+                            <connections>
+                                <action selector="fullSizedButtonPressed:" destination="BYZ-38-t0r" id="8Zb-aT-X6M"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="shirtCollectionView" destination="FcT-3J-tGm" id="2ET-Z6-jiA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -142,4 +151,7 @@
             <point key="canvasLocation" x="1568.8" y="698.5007496251875"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Expand" width="16" height="16"/>
+    </resources>
 </document>

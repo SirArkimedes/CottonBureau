@@ -12,6 +12,8 @@ class MainMenuViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     var tableData: [Product] = []
 
+    @IBOutlet weak var shirtCollectionView: UICollectionView!
+    fileprivate var toggleFullSize:Bool = false
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -54,4 +56,28 @@ class MainMenuViewController: UIViewController, UICollectionViewDelegate, UIColl
         return cell
     }
 
+    @IBAction func fullSizedButtonPressed(_ sender: AnyObject) {
+        if toggleFullSize {
+            toggleFullSize = false
+        } else {
+            toggleFullSize = true
+        }
+        
+        tableData = [
+            Product(mainImage: "Code", shirtName: "Code", authorName: "Cat Noone", fullSize: toggleFullSize),
+            Product(mainImage: "Cubic", shirtName: "Cubic", authorName: "Daniel Sutton", fullSize: toggleFullSize),
+            Product(mainImage: "MacDaddy", shirtName: "MacDaddy", authorName: "Lance Jones", fullSize: toggleFullSize),
+            Product(mainImage: "Phoenix", shirtName: "Phoenix", authorName: "Ben Stafford", fullSize: toggleFullSize),
+            Product(mainImage: "SanFran", shirtName: "SanFran", authorName: "The Man and the Mouse", fullSize: toggleFullSize),
+            Product(mainImage: "Solar", shirtName: "Solar", authorName: "Marian Mraz", fullSize: toggleFullSize),
+            Product(mainImage: "Code", shirtName: "Code", authorName: "Cat Noone", fullSize: toggleFullSize),
+            Product(mainImage: "Cubic", shirtName: "Cubic", authorName: "Daniel Sutton", fullSize: toggleFullSize),
+            Product(mainImage: "MacDaddy", shirtName: "MacDaddy", authorName: "Lance Jones", fullSize: toggleFullSize),
+            Product(mainImage: "Phoenix", shirtName: "Phoenix", authorName: "Ben Stafford", fullSize: toggleFullSize),
+            Product(mainImage: "SanFran", shirtName: "SanFran", authorName: "The Man and the Mouse", fullSize: toggleFullSize),
+            Product(mainImage: "Solar", shirtName: "Solar", authorName: "Marian Mraz", fullSize: toggleFullSize)
+        ]
+        
+        shirtCollectionView.reloadData()
+    }
 }

@@ -16,8 +16,12 @@ class Product: NSObject {
     
     var authorName:String
     
-    init(mainImage:String, shirtName:String, authorName:String) {
-        self.mainImage = UIImage(named: mainImage)!
+    init(mainImage:String, shirtName:String, authorName:String, fullSize: Bool = false) {
+        if fullSize {
+           self.mainImage = UIImage(named: mainImage + "Full")!
+        } else {
+            self.mainImage = UIImage(named: mainImage)!
+        }
         self.shirtName = shirtName
         self.authorName = authorName
     }
