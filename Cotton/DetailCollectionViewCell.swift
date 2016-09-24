@@ -14,5 +14,4 @@ class DetailCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var shirtName: UILabel!
     @IBOutlet weak var authorName: UILabel!
     
-    
 }

@@ -10,7 +10,6 @@ import UIKit
 
 class MainMenuViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
-    
     var tableData: [Product] = []
 
     override func viewDidLoad() {
