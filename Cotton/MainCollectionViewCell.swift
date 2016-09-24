@@ -11,7 +11,8 @@ import UIKit
 class MainCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var mainImageView: UIImageView!
-    @IBOutlet weak var middleLabel: UILabel!
+    @IBOutlet weak var shirtName: UILabel!
+    @IBOutlet weak var authorName: UILabel!
     
     
 }

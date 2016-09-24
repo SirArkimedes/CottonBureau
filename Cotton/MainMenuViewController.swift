@@ -12,7 +12,8 @@ class MainMenuViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     struct MyData {
         var mainImage:UIImage
-        var middleLabel:String
+        var shirtName:String
+        var authorName:String
     }
     
     var tableData: [MyData] = []
@@ -20,18 +21,18 @@ class MainMenuViewController: UIViewController, UICollectionViewDelegate, UIColl
     override func viewDidLoad() {
         super.viewDidLoad()
         tableData = [
-            MyData(mainImage: UIImage(named: "Code")!, middleLabel: "Code"),
-            MyData(mainImage: UIImage(named: "Cubic")!, middleLabel: "Cubic"),
-            MyData(mainImage: UIImage(named: "MacDaddy")!, middleLabel: "MacDaddy"),
-            MyData(mainImage: UIImage(named: "Phoenix")!, middleLabel: "Phoenix"),
-            MyData(mainImage: UIImage(named: "SanFran")!, middleLabel: "SanFran"),
-            MyData(mainImage: UIImage(named: "Solar")!, middleLabel: "Solar"),
-            MyData(mainImage: UIImage(named: "Code")!, middleLabel: "Code"),
-            MyData(mainImage: UIImage(named: "Cubic")!, middleLabel: "Cubic"),
-            MyData(mainImage: UIImage(named: "MacDaddy")!, middleLabel: "MacDaddy"),
-            MyData(mainImage: UIImage(named: "Phoenix")!, middleLabel: "Phoenix"),
-            MyData(mainImage: UIImage(named: "SanFran")!, middleLabel: "SanFran"),
-            MyData(mainImage: UIImage(named: "Solar")!, middleLabel: "Solar"),
+            MyData(mainImage: UIImage(named: "Code")!, shirtName: "Code", authorName: "Daniel Sutton"),
+            MyData(mainImage: UIImage(named: "Cubic")!, shirtName: "Cubic", authorName: "Daniel Sutton"),
+            MyData(mainImage: UIImage(named: "MacDaddy")!, shirtName: "MacDaddy", authorName: "Daniel Sutton"),
+            MyData(mainImage: UIImage(named: "Phoenix")!, shirtName: "Phoenix", authorName: "Daniel Sutton"),
+            MyData(mainImage: UIImage(named: "SanFran")!, shirtName: "SanFran", authorName: "Daniel Sutton"),
+            MyData(mainImage: UIImage(named: "Solar")!, shirtName: "Solar", authorName: "Daniel Sutton"),
+            MyData(mainImage: UIImage(named: "Code")!, shirtName: "Code", authorName: "Daniel Sutton"),
+            MyData(mainImage: UIImage(named: "Cubic")!, shirtName: "Cubic", authorName: "Daniel Sutton"),
+            MyData(mainImage: UIImage(named: "MacDaddy")!, shirtName: "MacDaddy", authorName: "Daniel Sutton"),
+            MyData(mainImage: UIImage(named: "Phoenix")!, shirtName: "Phoenix", authorName: "Daniel Sutton"),
+            MyData(mainImage: UIImage(named: "SanFran")!, shirtName: "SanFran", authorName: "Daniel Sutton"),
+            MyData(mainImage: UIImage(named: "Solar")!, shirtName: "Solar", authorName: "Daniel Sutton"),
         ]
         // Do any additional setup after loading the view.
     }
@@ -49,7 +50,8 @@ class MainMenuViewController: UIViewController, UICollectionViewDelegate, UIColl
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "mainCell", for: indexPath) as! MainCollectionViewCell
         // Set's the labels texts
         cell.mainImageView.image = tableData[indexPath.row].mainImage
-        cell.middleLabel.text = tableData[indexPath.row].middleLabel
+        cell.shirtName.text = tableData[indexPath.row].shirtName
+        cell.authorName.text = "By: " + tableData[indexPath.row].authorName
         // Return our new cell for display
         return cell
     }
