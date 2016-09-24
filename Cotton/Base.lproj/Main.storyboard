@@ -19,15 +19,6 @@
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tIB-Lf-dzg">
-                                <color key="backgroundColor" red="0.95843929052352905" green="0.38850376009941101" blue="0.32707977294921875" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Jump to shirt detail">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="lHR-o9-Ukt" kind="show" id="tac-N9-NBA"/>
-                                </connections>
-                            </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="FcT-3J-tGm">
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.90000000000000002" height="1"/>
@@ -79,6 +70,7 @@
                                             <outlet property="authorName" destination="ro7-st-4AG" id="2Yg-Zg-5VZ"/>
                                             <outlet property="mainImageView" destination="6o8-H9-p2d" id="MaO-2W-96o"/>
                                             <outlet property="shirtName" destination="9Z2-dS-0eo" id="sjo-ax-x1P"/>
+                                            <segue destination="lHR-o9-Ukt" kind="show" identifier="productDetailSegue" id="XCP-xQ-hx3"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -90,12 +82,9 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="FcT-3J-tGm" firstAttribute="trailing" secondItem="tIB-Lf-dzg" secondAttribute="trailing" id="Fkq-Tr-98O"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="FcT-3J-tGm" secondAttribute="bottom" constant="29" id="G65-td-Li8"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="FcT-3J-tGm" secondAttribute="bottom" id="G65-td-Li8"/>
                             <constraint firstItem="FcT-3J-tGm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ZEe-uB-eTb"/>
-                            <constraint firstItem="tIB-Lf-dzg" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="d7f-V7-s3P"/>
                             <constraint firstItem="FcT-3J-tGm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="hfN-I8-ZfD"/>
-                            <constraint firstItem="FcT-3J-tGm" firstAttribute="leading" secondItem="tIB-Lf-dzg" secondAttribute="leading" id="scV-oO-Qhr"/>
                             <constraint firstAttribute="trailing" secondItem="FcT-3J-tGm" secondAttribute="trailing" id="unu-0o-Ix3"/>
                         </constraints>
                     </view>
