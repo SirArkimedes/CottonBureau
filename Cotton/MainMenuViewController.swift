@@ -12,6 +12,7 @@ class MainMenuViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     var tableData: [Product] = []
 
+    @IBOutlet weak var categorySwitcherView: CategorySwitcher!
     @IBOutlet weak var shirtCollectionView: UICollectionView!
     
     fileprivate var toggleFullSize:Bool = false
@@ -20,6 +21,13 @@ class MainMenuViewController: UIViewController, UICollectionViewDelegate, UIColl
         super.viewDidLoad()
         
         navigationItem.titleView = UIImageView(image: UIImage(named: "whiteLogoSmall"))
+        
+        categorySwitcherView.teeButton = {
+            self.teeButtonPressed()
+        }
+        categorySwitcherView.detailButton = {
+            self.detailButtonPressed()
+        }
 
         let types:[TypeAndColor] = [.TNavy, .TBlack, .TankIndigo, .TankBlack, .HoodieBlue]
         tableData = [
@@ -52,7 +60,12 @@ class MainMenuViewController: UIViewController, UICollectionViewDelegate, UIColl
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "mainCell", for: indexPath) as! DetailCollectionViewCell
         // Set's the labels texts
-        cell.mainImageView.image = tableData[indexPath.row].detailImage
+        if toggleFullSize {
+            cell.mainImageView.image = tableData[indexPath.row].fullImage
+        } else {
+            cell.mainImageView.image = tableData[indexPath.row].detailImage
+        }
+        
         cell.mainImageView.layer.masksToBounds = true
         cell.mainImageView.layer.cornerRadius = 10
         cell.shirtName.text = tableData[indexPath.row].shirtName
@@ -68,30 +81,20 @@ class MainMenuViewController: UIViewController, UICollectionViewDelegate, UIColl
         navigationController!.pushViewController(vc, animated: true)
     }
 
-    @IBAction func fullSizedButtonPressed(_ sender: AnyObject) {
+    func teeButtonPressed() {
+        if !toggleFullSize {
+            toggleFullSize = true
+            shirtCollectionView.reloadData()
+        }
+        
+    }
+    
+    func detailButtonPressed() {
         if toggleFullSize {
             toggleFullSize = false
-        } else {
-            toggleFullSize = true
+            shirtCollectionView.reloadData()
         }
-
-        let types:[TypeAndColor] = [.TNavy, .TBlack, .TankIndigo, .TankBlack, .HoodieBlue]
-        tableData = [
-            Product(detailImage: "Code", shirtName: "Code", authorName: "Cat Noone", fullSize: toggleFullSize, hasTypes: types),
-            Product(detailImage: "Cubic", shirtName: "Cubic", authorName: "Daniel Sutton", fullSize: toggleFullSize, hasTypes: types),
-            Product(detailImage: "MacDaddy", shirtName: "MacDaddy", authorName: "Lance Jones", fullSize: toggleFullSize, hasTypes: types),
-            Product(detailImage: "Phoenix", shirtName: "Phoenix", authorName: "Ben Stafford", fullSize: toggleFullSize, hasTypes: types),
-            Product(detailImage: "SanFran", shirtName: "SanFran", authorName: "The Man and the Mouse", fullSize: toggleFullSize, hasTypes: types),
-            Product(detailImage: "Solar", shirtName: "Solar", authorName: "Marian Mraz", fullSize: toggleFullSize, hasTypes: types),
-            Product(detailImage: "Code", shirtName: "Code", authorName: "Cat Noone", fullSize: toggleFullSize, hasTypes: types),
-            Product(detailImage: "Cubic", shirtName: "Cubic", authorName: "Daniel Sutton", fullSize: toggleFullSize, hasTypes: types),
-            Product(detailImage: "MacDaddy", shirtName: "MacDaddy", authorName: "Lance Jones", fullSize: toggleFullSize, hasTypes: types),
-            Product(detailImage: "Phoenix", shirtName: "Phoenix", authorName: "Ben Stafford", fullSize: toggleFullSize, hasTypes: types),
-            Product(detailImage: "SanFran", shirtName: "SanFran", authorName: "The Man and the Mouse", fullSize: toggleFullSize, hasTypes: types),
-            Product(detailImage: "Solar", shirtName: "Solar", authorName: "Marian Mraz", fullSize: toggleFullSize, hasTypes: types)
-        ]
         
-        shirtCollectionView.reloadData()
     }
     
 }

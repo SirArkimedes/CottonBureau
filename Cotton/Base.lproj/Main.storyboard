@@ -99,6 +99,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="8LH-cf-q3d"/>
                     <connections>
+                        <outlet property="categorySwitcherView" destination="Kg8-oa-XPL" id="vc6-rg-nuZ"/>
                         <outlet property="shirtCollectionView" destination="FcT-3J-tGm" id="2ET-Z6-jiA"/>
                     </connections>
                 </viewController>

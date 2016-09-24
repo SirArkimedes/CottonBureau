@@ -11,13 +11,18 @@ import SnapKit
 
 class CategorySwitcher: UIButton {
     
+    var teeButton:(() -> ())?
+    var detailButton:(() -> ())?
+    
     required public init?(coder aDecoder: NSCoder) {
         
         super.init(coder: aDecoder)
 
         let teeButton = UIButton()
-        teeButton.titleLabel!.text = "TEE"
-        teeButton.titleLabel!.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        teeButton.setTitle("TEE", for: UIControlState.normal)
+        teeButton.setTitleColor(#colorLiteral(red: 0.9568627451, green: 0.3882352941, blue: 0.3254901961, alpha: 1), for: UIControlState.normal)
+        teeButton.titleLabel?.font = UIFont(name: "Helvetica", size: 16.0)
+        teeButton.addTarget(self, action: #selector(teeButtonPressed), for: .touchUpInside)
         teeButton.layer.borderWidth = 3
         teeButton.layer.masksToBounds = true
         teeButton.layer.borderColor = #colorLiteral(red: 0.9568627451, green: 0.3882352941, blue: 0.3254901961, alpha: 1).cgColor
@@ -29,21 +34,35 @@ class CategorySwitcher: UIButton {
         }
         
         let detailButton = UIButton()
-        detailButton.titleLabel!.text = "DETAIL"
-        teeButton.layer.borderWidth = 3
-        teeButton.layer.masksToBounds = true
-        teeButton.layer.borderColor = #colorLiteral(red: 0.9568627451, green: 0.3882352941, blue: 0.3254901961, alpha: 1).cgColor
+        detailButton.setTitle("DETAIL", for: UIControlState.normal)
+        detailButton.setTitleColor(#colorLiteral(red: 0.9568627451, green: 0.3882352941, blue: 0.3254901961, alpha: 1), for: UIControlState.normal)
+        detailButton.titleLabel?.font = UIFont(name: "Helvetica", size: 16.0)
+        detailButton.addTarget(self, action: #selector(detailButtonPressed), for: .touchUpInside)
+        detailButton.layer.borderWidth = 3
+        detailButton.layer.masksToBounds = true
+        detailButton.layer.borderColor = #colorLiteral(red: 0.9568627451, green: 0.3882352941, blue: 0.3254901961, alpha: 1).cgColor
         addSubview(detailButton)
         detailButton.snp.makeConstraints { (ConstraintMaker) in
             ConstraintMaker.right.equalTo(self)
             ConstraintMaker.top.bottom.equalTo(self)
             ConstraintMaker.left.equalTo(teeButton.snp.right)
         }
-        
+                
         layer.borderWidth = 3
         layer.cornerRadius = 5
         layer.masksToBounds = true
         layer.borderColor = #colorLiteral(red: 0.9568627451, green: 0.3882352941, blue: 0.3254901961, alpha: 1).cgColor
+        
+    }
+    
+    //MARK: - Actions
+    
+    @objc func teeButtonPressed() {
+        if teeButton != nil { teeButton!() }
+    }
+    
+    @objc func detailButtonPressed() {
+        if detailButton != nil { detailButton!() }
         
     }
 

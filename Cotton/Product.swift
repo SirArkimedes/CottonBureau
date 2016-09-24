@@ -28,7 +28,6 @@ class Product: NSObject {
     init(detailImage:String,
          shirtName:String,
          authorName:String,
-         fullSize: Bool = false,
          hasTypes:[TypeAndColor]) {
         
         self.fullImage = UIImage(named: detailImage + "Full")!
