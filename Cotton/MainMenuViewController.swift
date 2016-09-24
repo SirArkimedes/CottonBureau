@@ -22,16 +22,16 @@ class MainMenuViewController: UIViewController, UICollectionViewDelegate, UIColl
         tableData = [
             MyData(mainImage: UIImage(named: "Code")!, middleLabel: "Code"),
             MyData(mainImage: UIImage(named: "Cubic")!, middleLabel: "Cubic"),
+            MyData(mainImage: UIImage(named: "MacDaddy")!, middleLabel: "MacDaddy"),
+            MyData(mainImage: UIImage(named: "Phoenix")!, middleLabel: "Phoenix"),
+            MyData(mainImage: UIImage(named: "SanFran")!, middleLabel: "SanFran"),
+            MyData(mainImage: UIImage(named: "Solar")!, middleLabel: "Solar"),
             MyData(mainImage: UIImage(named: "Code")!, middleLabel: "Code"),
             MyData(mainImage: UIImage(named: "Cubic")!, middleLabel: "Cubic"),
-            MyData(mainImage: UIImage(named: "Code")!, middleLabel: "Code"),
-            MyData(mainImage: UIImage(named: "Cubic")!, middleLabel: "Cubic"),
-            MyData(mainImage: UIImage(named: "Code")!, middleLabel: "Code"),
-            MyData(mainImage: UIImage(named: "Cubic")!, middleLabel: "Cubic"),
-            MyData(mainImage: UIImage(named: "Cubic")!, middleLabel: "Cubic"),
-            MyData(mainImage: UIImage(named: "Code")!, middleLabel: "Code"),
-            MyData(mainImage: UIImage(named: "Cubic")!, middleLabel: "Cubic"),
-            MyData(mainImage: UIImage(named: "Code")!, middleLabel: "Code")
+            MyData(mainImage: UIImage(named: "MacDaddy")!, middleLabel: "MacDaddy"),
+            MyData(mainImage: UIImage(named: "Phoenix")!, middleLabel: "Phoenix"),
+            MyData(mainImage: UIImage(named: "SanFran")!, middleLabel: "SanFran"),
+            MyData(mainImage: UIImage(named: "Solar")!, middleLabel: "Solar"),
         ]
         // Do any additional setup after loading the view.
     }
