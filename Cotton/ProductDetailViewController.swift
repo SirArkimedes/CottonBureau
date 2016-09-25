@@ -16,6 +16,7 @@ class ProductDetailViewController: UIViewController {
     
     @IBOutlet weak var shirtImageView: UIImageView!
     @IBOutlet weak var colorSwitcherContainer: UIView!
+    @IBOutlet weak var shirtNameLabel: UILabel!
     @IBOutlet weak var progressViewContainer: UIView!
     
     private var progressBar:FatRoundProgressView!
@@ -188,6 +189,8 @@ class ProductDetailViewController: UIViewController {
             }
 
         }
+        
+        shirtNameLabel.text = product.shirtName
         
         progressBar = FatRoundProgressView()
         progressViewContainer.addSubview(progressBar)

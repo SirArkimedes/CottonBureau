@@ -223,6 +223,7 @@
                         <outlet property="progressViewContainer" destination="TJr-PQ-neY" id="38s-xf-XRN"/>
                         <outlet property="scrollView" destination="pFy-oS-Mu5" id="2Me-eM-KRk"/>
                         <outlet property="shirtImageView" destination="9AF-GZ-bLZ" id="P85-N6-gs2"/>
+                        <outlet property="shirtNameLabel" destination="97I-Wr-EFV" id="fmK-Nu-wQx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fln-oP-Smu" userLabel="First Responder" sceneMemberID="firstResponder"/>
