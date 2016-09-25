@@ -95,7 +95,7 @@
 				4D2D7F7F1D9615710043AFCA /* Main.storyboard */,
 				4D2D7F7B1D9615710043AFCA /* AppDelegate.swift */,
 				60555ECA1D964B57000EAD2B /* Product.swift */,
-				4D9B628F1D97022000C72E1B /* ProductDetail */,
+				4D2D7F9F1D961C700043AFCA /* ProductDetailViewController.swift */,
 				60389DBB1D96E9220089CC6F /* CategorySwitcher.swift */,
 				4D2D7F9D1D9618430043AFCA /* MainMenuViewController.swift */,
 				4D8C6F6C1D965A0F007F2D97 /* DetailCollectionViewCell.swift */,
@@ -113,14 +113,6 @@
 				4D2D7F921D9615710043AFCA /* Info.plist */,
 			);
 			path = CottonTests;
-			sourceTree = "<group>";
-		};
-		4D9B628F1D97022000C72E1B /* ProductDetail */ = {
-			isa = PBXGroup;
-			children = (
-				4D2D7F9F1D961C700043AFCA /* ProductDetailViewController.swift */,
-			);
-			name = ProductDetail;
 			sourceTree = "<group>";
 		};
 		7635FF1809F5068500991A8D /* Pods */ = {

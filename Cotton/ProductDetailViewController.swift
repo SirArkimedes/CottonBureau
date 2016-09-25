@@ -185,7 +185,15 @@ class ProductDetailViewController: UIViewController {
     // MARK: - Actions
     
     @objc private func typeButtonPressed(sender: UIButton) {
-        
+        if sender.tag == product.hasTypes.count - 1 {
+            UIView.transition(with: shirtImageView, duration: 0.5, options: .transitionCrossDissolve, animations: {
+                self.shirtImageView.image = self.product.detailImage
+                }, completion: nil)
+        } else {
+            UIView.transition(with: shirtImageView, duration: 0.5, options: .transitionCrossDissolve, animations: {
+                self.shirtImageView.image = UIImage(named: "SanFranFull")!
+                }, completion: nil)
+        }
     }
 
     // MARK: - Helpers
@@ -202,7 +210,7 @@ class ProductDetailViewController: UIViewController {
             button.setImage(UIImage(named: "TankBlack")!, for: .normal)
         case .HoodieBlue:
             button.setImage(UIImage(named: "Hoodie")!, for: .normal)
-        case .Detail:
+        default:
             button.setImage(UIImage(named: "Detail"), for: .normal)
         }
     }

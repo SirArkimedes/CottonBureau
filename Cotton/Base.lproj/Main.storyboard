@@ -156,9 +156,9 @@
                                     <constraint firstAttribute="trailing" secondItem="JC7-35-qpi" secondAttribute="trailing" constant="8" id="cSp-ip-Bux"/>
                                     <constraint firstAttribute="trailing" secondItem="9AF-GZ-bLZ" secondAttribute="trailing" id="izh-wr-NGJ"/>
                                     <constraint firstItem="9AF-GZ-bLZ" firstAttribute="leading" secondItem="pFy-oS-Mu5" secondAttribute="leading" id="rzg-NT-B13"/>
-                                    <constraint firstAttribute="bottom" secondItem="9AF-GZ-bLZ" secondAttribute="bottom" constant="558" id="tcn-u6-rTz"/>
-                                    <constraint firstItem="9AF-GZ-bLZ" firstAttribute="top" secondItem="pFy-oS-Mu5" secondAttribute="top" id="u60-0g-BNU"/>
-                                    <constraint firstItem="JC7-35-qpi" firstAttribute="top" secondItem="9AF-GZ-bLZ" secondAttribute="bottom" constant="8" id="ynA-IX-YNM"/>
+                                    <constraint firstAttribute="bottom" secondItem="9AF-GZ-bLZ" secondAttribute="bottom" constant="624" id="tcn-u6-rTz"/>
+                                    <constraint firstItem="9AF-GZ-bLZ" firstAttribute="top" secondItem="pFy-oS-Mu5" secondAttribute="top" constant="-2" id="u60-0g-BNU"/>
+                                    <constraint firstItem="JC7-35-qpi" firstAttribute="top" secondItem="9AF-GZ-bLZ" secondAttribute="bottom" constant="10" id="ynA-IX-YNM"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -170,6 +170,7 @@
                             <constraint firstItem="b2n-AC-rPe" firstAttribute="top" secondItem="pFy-oS-Mu5" secondAttribute="bottom" id="pN7-7t-xIQ"/>
                         </constraints>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="1000"/>
                     <connections>
