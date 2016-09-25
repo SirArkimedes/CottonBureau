@@ -10,12 +10,15 @@ import UIKit
 
 class ProductDetailViewController: UIViewController {
     
+    var product:Product!
+    
     @IBOutlet weak var scrollView: UIScrollView!
     
     @IBOutlet weak var shirtImageView: UIImageView!
     @IBOutlet weak var colorSwitcherContainer: UIView!
+    @IBOutlet weak var progressViewContainer: UIView!
     
-    var product:Product!
+    private var progressBar:FatRoundProgressView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -185,6 +188,17 @@ class ProductDetailViewController: UIViewController {
             }
 
         }
+        
+        progressBar = FatRoundProgressView()
+        progressViewContainer.addSubview(progressBar)
+        progressBar.snp.makeConstraints { make in
+            make.left.right.top.bottom.equalTo(progressViewContainer)
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        progressBar.progress = product.amountPurchased / product.amountTillPrint
     }
     
     // MARK: - Actions
