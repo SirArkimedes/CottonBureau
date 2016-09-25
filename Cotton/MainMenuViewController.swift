@@ -31,18 +31,18 @@ class MainMenuViewController: UIViewController, UICollectionViewDelegate, UIColl
 
         let types:[TypeAndColor] = [.TNavy, .TBlack, .TankIndigo, .TankBlack, .HoodieBlue]
         tableData = [
-            Product(detailImage: "Code", shirtName: "Code", authorName: "Cat Noone", hasTypes: types),
-            Product(detailImage: "Cubic", shirtName: "Cubic", authorName: "Daniel Sutton", hasTypes: types),
-            Product(detailImage: "MacDaddy", shirtName: "MacDaddy", authorName: "Lance Jones", hasTypes: types),
-            Product(detailImage: "Phoenix", shirtName: "Phoenix", authorName: "Ben Stafford", hasTypes: types),
-            Product(detailImage: "SanFran", shirtName: "SanFran", authorName: "The Man and the Mouse", hasTypes: types),
-            Product(detailImage: "Solar", shirtName: "Solar", authorName: "Marian Mraz", hasTypes: types),
-            Product(detailImage: "Code", shirtName: "Code", authorName: "Cat Noone", hasTypes: types),
-            Product(detailImage: "Cubic", shirtName: "Cubic", authorName: "Daniel Sutton", hasTypes: types),
-            Product(detailImage: "MacDaddy", shirtName: "MacDaddy", authorName: "Lance Jones", hasTypes: types),
-            Product(detailImage: "Phoenix", shirtName: "Phoenix", authorName: "Ben Stafford", hasTypes: types),
-            Product(detailImage: "SanFran", shirtName: "SanFran", authorName: "The Man and the Mouse", hasTypes: types),
-            Product(detailImage: "Solar", shirtName: "Solar", authorName: "Marian Mraz", hasTypes: types)
+            Product(detailImage: "Code", shirtName: "Design In Code", authorName: "Cat Noone", amountPurchased: 16, hasTypes: types),
+            Product(detailImage: "Cubic", shirtName: "Cubical", authorName: "Daniel Sutton", amountPurchased: 10, hasTypes: types),
+            Product(detailImage: "MacDaddy", shirtName: "Mac Daddy", authorName: "Lance Jones", amountPurchased: 19, hasTypes: types),
+            Product(detailImage: "Phoenix", shirtName: "Rise Again", authorName: "Ben Stafford", amountPurchased: 1, hasTypes: types),
+            Product(detailImage: "SanFran", shirtName: "San Fransokyo", authorName: "The Man and the Mouse", amountPurchased: 0, hasTypes: types),
+            Product(detailImage: "Solar", shirtName: "Pale Blue Dot", authorName: "Marian Mraz", amountPurchased: 2, hasTypes: types),
+            Product(detailImage: "Code", shirtName: "Design In Code", authorName: "Cat Noone", amountPurchased: 7, hasTypes: types),
+            Product(detailImage: "Cubic", shirtName: "Cubical", authorName: "Daniel Sutton", amountPurchased: 11, hasTypes: types),
+            Product(detailImage: "MacDaddy", shirtName: "Mac Daddy", authorName: "Lance Jones", amountPurchased: 15, hasTypes: types),
+            Product(detailImage: "Phoenix", shirtName: "Rise Again", authorName: "Ben Stafford", amountPurchased: 6, hasTypes: types),
+            Product(detailImage: "SanFran", shirtName: "San Fransokyo", authorName: "The Man and the Mouse", amountPurchased: 9, hasTypes: types),
+            Product(detailImage: "Solar", shirtName: "Pale Blue Dot", authorName: "Marian Mraz", amountPurchased: 10, hasTypes: types)
         ]
     }
 

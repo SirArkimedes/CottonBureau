@@ -19,22 +19,27 @@ public enum TypeAndColor {
 
 class Product: NSObject {
     
+    let amountTillPrint:CGFloat = 12.0
+    
     var fullImage:UIImage
     var detailImage:UIImage
     var shirtName:String
     var authorName:String
+    var amountPurchased:CGFloat = 0.0
     
     var hasTypes:[TypeAndColor] = []
     
     init(detailImage:String,
          shirtName:String,
          authorName:String,
+         amountPurchased:CGFloat,
          hasTypes:[TypeAndColor]) {
         
         self.fullImage = UIImage(named: detailImage + "Full")!
         self.detailImage = UIImage(named: detailImage)!
         self.shirtName = shirtName
         self.authorName = authorName
+        self.amountPurchased = amountPurchased
         self.hasTypes = hasTypes
     }
 
