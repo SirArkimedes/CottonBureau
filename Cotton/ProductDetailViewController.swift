@@ -24,37 +24,58 @@ class ProductDetailViewController: UIViewController {
         
         shirtImageView.image = product.fullImage
         
-        // Setup Color switcher
+        product.hasTypes.append(.Detail)
+        
+        // Setup type switcher
+        let buttonSpacing = 15.0
         if product.hasTypes.count % 2 == 0 {
-            // even
-        } else {
-            // Setup the middle button then build the rest behind that
-            let midButton = UIButton()
-            determineImage(index: product.hasTypes.count / 2, button: midButton)
-            colorSwitcherContainer.addSubview(midButton)
-            midButton.snp.makeConstraints { make in
+            // Setup thw middle two buttons then build the rest
+            let leftMidButton = UIButton()
+            leftMidButton.addTarget(self, action: #selector(typeButtonPressed(sender:)), for: .touchUpInside)
+            leftMidButton.tag = product.hasTypes.count / 2 - 1
+            determineImage(index: leftMidButton.tag, button: leftMidButton)
+            colorSwitcherContainer.addSubview(leftMidButton)
+            leftMidButton.snp.makeConstraints { make in
                 make.height.equalTo(50)
-                make.center.equalTo(colorSwitcherContainer)
+                make.width.equalTo(45)
+                make.centerY.equalTo(colorSwitcherContainer)
+                make.right.equalTo(colorSwitcherContainer.snp.centerX).offset(-buttonSpacing/2.0)
+            }
+            
+            let rightMidButton = UIButton()
+            rightMidButton.addTarget(self, action: #selector(typeButtonPressed(sender:)), for: .touchUpInside)
+            rightMidButton.tag = product.hasTypes.count / 2
+            determineImage(index: rightMidButton.tag, button: rightMidButton)
+            colorSwitcherContainer.addSubview(rightMidButton)
+            rightMidButton.snp.makeConstraints { make in
+                make.height.equalTo(50)
+                make.width.equalTo(45)
+                make.centerY.equalTo(leftMidButton)
+                make.left.equalTo(colorSwitcherContainer.snp.centerX).offset(buttonSpacing/2.0)
             }
             
             // Left side
             var previousButton:UIView?
-            var i = product.hasTypes.count / 2 - 1
+            var i = product.hasTypes.count / 2 - 2
             while i >= 0 {
                 
                 let button = UIButton()
-                determineImage(index: i, button: button)
+                button.addTarget(self, action: #selector(typeButtonPressed(sender:)), for: .touchUpInside)
+                button.tag = i
+                determineImage(index: button.tag, button: button)
                 colorSwitcherContainer.addSubview(button)
                 
                 if let prev = previousButton {
                     button.snp.makeConstraints { make in
-                        make.top.bottom.equalTo(midButton)
-                        make.right.equalTo(prev.snp.left).offset(-15)
+                        make.top.bottom.equalTo(leftMidButton)
+                        make.right.equalTo(prev.snp.left).offset(-buttonSpacing)
+                        make.width.equalTo(leftMidButton)
                     }
                 } else {
                     button.snp.makeConstraints { make in
-                        make.top.bottom.equalTo(midButton)
-                        make.right.equalTo(midButton.snp.left).offset(-15)
+                        make.top.bottom.equalTo(leftMidButton)
+                        make.right.equalTo(leftMidButton.snp.left).offset(-buttonSpacing)
+                        make.width.equalTo(leftMidButton)
                     }
                 }
                 previousButton = button
@@ -67,18 +88,91 @@ class ProductDetailViewController: UIViewController {
             while i <= product.hasTypes.count - 1 {
                 
                 let button = UIButton()
-                determineImage(index: i, button: button)
-                
+                button.addTarget(self, action: #selector(typeButtonPressed(sender:)), for: .touchUpInside)
+                button.tag = i
+                determineImage(index: button.tag, button: button)
                 colorSwitcherContainer.addSubview(button)
+                
+                if let prev = previousButton {
+                    button.snp.makeConstraints { make in
+                        make.top.bottom.equalTo(rightMidButton)
+                        make.left.equalTo(prev.snp.right).offset(buttonSpacing)
+                        make.width.equalTo(rightMidButton)
+                    }
+                } else {
+                    button.snp.makeConstraints { make in
+                        make.top.bottom.equalTo(rightMidButton)
+                        make.left.equalTo(rightMidButton.snp.right).offset(buttonSpacing)
+                        make.width.equalTo(rightMidButton)
+                    }
+                }
+                previousButton = button
+                i += 1
+            }
+            
+        } else {
+            // Setup the middle button then build the rest behind that
+            let midButton = UIButton()
+            midButton.addTarget(self, action: #selector(typeButtonPressed(sender:)), for: .touchUpInside)
+            midButton.tag = product.hasTypes.count / 2
+            determineImage(index: midButton.tag, button: midButton)
+            colorSwitcherContainer.addSubview(midButton)
+            midButton.snp.makeConstraints { make in
+                make.height.equalTo(50)
+                make.width.equalTo(45)
+                make.center.equalTo(colorSwitcherContainer)
+            }
+            
+            // Left side
+            var previousButton:UIView?
+            var i = product.hasTypes.count / 2 - 1
+            while i >= 0 {
+                
+                let button = UIButton()
+                button.addTarget(self, action: #selector(typeButtonPressed(sender:)), for: .touchUpInside)
+                button.tag = i
+                determineImage(index: button.tag, button: button)
+                colorSwitcherContainer.addSubview(button)
+                
                 if let prev = previousButton {
                     button.snp.makeConstraints { make in
                         make.top.bottom.equalTo(midButton)
-                        make.left.equalTo(prev.snp.right).offset(15)
+                        make.right.equalTo(prev.snp.left).offset(-buttonSpacing)
+                        make.width.equalTo(midButton)
                     }
                 } else {
                     button.snp.makeConstraints { make in
                         make.top.bottom.equalTo(midButton)
-                        make.left.equalTo(midButton.snp.right).offset(15)
+                        make.right.equalTo(midButton.snp.left).offset(-buttonSpacing)
+                        make.width.equalTo(midButton)
+                    }
+                }
+                previousButton = button
+                i -= 1
+            }
+            previousButton = nil
+            
+            // Right side
+            i = product.hasTypes.count / 2 + 1
+            while i <= product.hasTypes.count - 1 {
+                
+                let button = UIButton()
+                button.addTarget(self, action: #selector(typeButtonPressed(sender:)), for: .touchUpInside)
+                button.tag = i
+                determineImage(index: button.tag, button: button)
+                colorSwitcherContainer.addSubview(button)
+                
+                if let prev = previousButton {
+                    button.snp.makeConstraints { make in
+                        make.top.bottom.equalTo(midButton)
+                        make.left.equalTo(prev.snp.right).offset(buttonSpacing)
+                        make.width.equalTo(midButton)
+                    }
+                } else {
+                    button.snp.makeConstraints { make in
+                        make.top.bottom.equalTo(midButton)
+                        make.left.equalTo(midButton.snp.right).offset(buttonSpacing)
+                        make.width.equalTo(midButton)
                     }
                 }
                 previousButton = button
@@ -87,8 +181,14 @@ class ProductDetailViewController: UIViewController {
 
         }
     }
+    
+    // MARK: - Actions
+    
+    @objc private func typeButtonPressed(sender: UIButton) {
+        
+    }
 
-    // MARK: Helpers
+    // MARK: - Helpers
     
     private func determineImage(index value: Int, button: UIButton) {
         switch product.hasTypes[value] {
@@ -102,6 +202,8 @@ class ProductDetailViewController: UIViewController {
             button.setImage(UIImage(named: "TankBlack")!, for: .normal)
         case .HoodieBlue:
             button.setImage(UIImage(named: "Hoodie")!, for: .normal)
+        case .Detail:
+            button.setImage(UIImage(named: "Detail"), for: .normal)
         }
     }
 

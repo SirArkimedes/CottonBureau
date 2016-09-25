@@ -14,6 +14,7 @@ public enum TypeAndColor {
     case TankIndigo
     case TankBlack
     case HoodieBlue
+    case Detail
 }
 
 class Product: NSObject {
