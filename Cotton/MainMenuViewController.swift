@@ -22,10 +22,10 @@ class MainMenuViewController: UIViewController, UICollectionViewDelegate, UIColl
         
         navigationItem.titleView = UIImageView(image: UIImage(named: "whiteLogoSmall"))
         
-        categorySwitcherView.teeButton = {
+        categorySwitcherView.tee = {
             self.teeButtonPressed()
         }
-        categorySwitcherView.detailButton = {
+        categorySwitcherView.detail = {
             self.detailButtonPressed()
         }
 
@@ -92,6 +92,7 @@ class MainMenuViewController: UIViewController, UICollectionViewDelegate, UIColl
     func detailButtonPressed() {
         if toggleFullSize {
             toggleFullSize = false
+
             shirtCollectionView.reloadData()
         }
         

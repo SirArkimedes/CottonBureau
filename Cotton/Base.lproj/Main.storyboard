@@ -24,7 +24,7 @@
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.90000000000000002" height="1"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="569" id="kRD-rv-jbO"/>
+                                    <constraint firstAttribute="height" constant="561" id="kRD-rv-jbO"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="cyF-QV-gZS">
                                     <size key="itemSize" width="187" height="218"/>
@@ -91,8 +91,8 @@
                             <constraint firstItem="Kg8-oa-XPL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="65" id="HBR-HU-tln"/>
                             <constraint firstItem="FcT-3J-tGm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="XWO-9d-oeG"/>
                             <constraint firstAttribute="trailing" secondItem="FcT-3J-tGm" secondAttribute="trailing" id="gUT-PG-9Pg"/>
-                            <constraint firstItem="Kg8-oa-XPL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="1" id="gbs-ma-tqt"/>
-                            <constraint firstItem="FcT-3J-tGm" firstAttribute="top" secondItem="Kg8-oa-XPL" secondAttribute="bottom" id="jaZ-E4-JwR"/>
+                            <constraint firstItem="Kg8-oa-XPL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="5" id="gbs-ma-tqt"/>
+                            <constraint firstItem="FcT-3J-tGm" firstAttribute="top" secondItem="Kg8-oa-XPL" secondAttribute="bottom" constant="4" id="jaZ-E4-JwR"/>
                             <constraint firstItem="Kg8-oa-XPL" firstAttribute="centerX" secondItem="FcT-3J-tGm" secondAttribute="centerX" id="nbD-rj-pZ6"/>
                             <constraint firstItem="FcT-3J-tGm" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="pwM-fx-qi3"/>
                         </constraints>
