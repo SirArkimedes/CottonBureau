@@ -28,28 +28,29 @@ class ProductDetailViewController: UIViewController {
         
         // Setup type switcher
         let buttonSpacing = 15.0
+        let typeBoxSize = 35.0
         if product.hasTypes.count % 2 == 0 {
             // Setup thw middle two buttons then build the rest
             let leftMidButton = UIButton()
+            leftMidButton.contentMode = .scaleAspectFit
             leftMidButton.addTarget(self, action: #selector(typeButtonPressed(sender:)), for: .touchUpInside)
             leftMidButton.tag = product.hasTypes.count / 2 - 1
             determineImage(index: leftMidButton.tag, button: leftMidButton)
             colorSwitcherContainer.addSubview(leftMidButton)
             leftMidButton.snp.makeConstraints { make in
-                make.height.equalTo(50)
-                make.width.equalTo(45)
+                make.height.width.equalTo(typeBoxSize)
                 make.centerY.equalTo(colorSwitcherContainer)
                 make.right.equalTo(colorSwitcherContainer.snp.centerX).offset(-buttonSpacing/2.0)
             }
             
             let rightMidButton = UIButton()
+            rightMidButton.contentMode = .scaleAspectFit
             rightMidButton.addTarget(self, action: #selector(typeButtonPressed(sender:)), for: .touchUpInside)
             rightMidButton.tag = product.hasTypes.count / 2
             determineImage(index: rightMidButton.tag, button: rightMidButton)
             colorSwitcherContainer.addSubview(rightMidButton)
             rightMidButton.snp.makeConstraints { make in
-                make.height.equalTo(50)
-                make.width.equalTo(45)
+                make.height.width.equalTo(typeBoxSize)
                 make.centerY.equalTo(leftMidButton)
                 make.left.equalTo(colorSwitcherContainer.snp.centerX).offset(buttonSpacing/2.0)
             }
@@ -60,6 +61,7 @@ class ProductDetailViewController: UIViewController {
             while i >= 0 {
                 
                 let button = UIButton()
+                button.contentMode = .scaleAspectFit
                 button.addTarget(self, action: #selector(typeButtonPressed(sender:)), for: .touchUpInside)
                 button.tag = i
                 determineImage(index: button.tag, button: button)
@@ -88,6 +90,7 @@ class ProductDetailViewController: UIViewController {
             while i <= product.hasTypes.count - 1 {
                 
                 let button = UIButton()
+                button.contentMode = .scaleAspectFit
                 button.addTarget(self, action: #selector(typeButtonPressed(sender:)), for: .touchUpInside)
                 button.tag = i
                 determineImage(index: button.tag, button: button)
@@ -113,13 +116,13 @@ class ProductDetailViewController: UIViewController {
         } else {
             // Setup the middle button then build the rest behind that
             let midButton = UIButton()
+            midButton.contentMode = .scaleAspectFit
             midButton.addTarget(self, action: #selector(typeButtonPressed(sender:)), for: .touchUpInside)
             midButton.tag = product.hasTypes.count / 2
             determineImage(index: midButton.tag, button: midButton)
             colorSwitcherContainer.addSubview(midButton)
             midButton.snp.makeConstraints { make in
-                make.height.equalTo(50)
-                make.width.equalTo(45)
+                make.height.width.equalTo(typeBoxSize)
                 make.center.equalTo(colorSwitcherContainer)
             }
             
@@ -129,6 +132,7 @@ class ProductDetailViewController: UIViewController {
             while i >= 0 {
                 
                 let button = UIButton()
+                button.contentMode = .scaleAspectFit
                 button.addTarget(self, action: #selector(typeButtonPressed(sender:)), for: .touchUpInside)
                 button.tag = i
                 determineImage(index: button.tag, button: button)
@@ -157,6 +161,7 @@ class ProductDetailViewController: UIViewController {
             while i <= product.hasTypes.count - 1 {
                 
                 let button = UIButton()
+                button.contentMode = .scaleAspectFit
                 button.addTarget(self, action: #selector(typeButtonPressed(sender:)), for: .touchUpInside)
                 button.tag = i
                 determineImage(index: button.tag, button: button)
