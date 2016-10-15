@@ -28,8 +28,6 @@ class ProductDetailViewController: UIViewController {
         
         shirtImageView.image = product.fullImage
         
-        product.hasTypes.append(.Detail)
-        
         // Setup type switcher
         let buttonSpacing = 15.0
         let typeBoxSize = 35.0

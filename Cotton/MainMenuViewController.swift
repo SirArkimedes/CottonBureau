@@ -29,7 +29,7 @@ class MainMenuViewController: UIViewController, UICollectionViewDelegate, UIColl
             self.detailButtonPressed()
         }
 
-        let types:[TypeAndColor] = [.TNavy, .TBlack, .TankIndigo, .TankBlack, .HoodieBlue]
+        let types:[TypeAndColor] = [.TNavy, .TBlack, .TankIndigo, .TankBlack, .HoodieBlue, .Detail]
         tableData = [
             Product(detailImage: "Code", shirtName: "Design In Code", authorName: "Cat Noone", amountPurchased: 16, hasTypes: types),
             Product(detailImage: "Cubic", shirtName: "Cubical", authorName: "Daniel Sutton", amountPurchased: 10, hasTypes: types),
