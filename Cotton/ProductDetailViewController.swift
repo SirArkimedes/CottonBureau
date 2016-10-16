@@ -19,6 +19,15 @@ class ProductDetailViewController: UIViewController {
     @IBOutlet weak var shirtNameLabel: UILabel!
     @IBOutlet weak var progressViewContainer: UIView!
     
+    @IBOutlet weak var amountSoldCount: UILabel!
+    @IBOutlet weak var amountSoldLabel: UILabel!
+    @IBOutlet weak var amountToGoCount: UILabel!
+    @IBOutlet weak var amountToGoLabel: UILabel!
+    @IBOutlet weak var daysLeftCount: UILabel!
+    @IBOutlet weak var daysLeftLabel: UILabel!
+    
+    @IBOutlet weak var daysLeftLeftConstraint: NSLayoutConstraint!
+    
     private var progressBar:FatRoundProgressView!
     
     override func viewDidLoad() {
@@ -32,7 +41,7 @@ class ProductDetailViewController: UIViewController {
         let buttonSpacing = 15.0
         let typeBoxSize = 35.0
         if product.hasTypes.count % 2 == 0 {
-            // Setup thw middle two buttons then build the rest
+            // Setup the middle two buttons then build the rest
             let leftMidButton = UIButton()
             leftMidButton.contentMode = .scaleAspectFit
             leftMidButton.addTarget(self, action: #selector(typeButtonPressed(sender:)), for: .touchUpInside)
@@ -190,11 +199,30 @@ class ProductDetailViewController: UIViewController {
         
         shirtNameLabel.text = product.shirtName
         
+        // Progress Bar
         progressBar = FatRoundProgressView()
         progressViewContainer.addSubview(progressBar)
         progressBar.snp.makeConstraints { make in
             make.left.right.top.bottom.equalTo(progressViewContainer)
         }
+        
+        // Amount sold - Amount to go - Days Left
+        amountSoldCount.text = "\(Int(product.amountPurchased))"
+        if product.amountPurchased >= 12.0 {
+            amountToGoCount.isHidden = true
+            amountToGoLabel.isHidden = true
+            
+            // Redo the constraints to move the label over to the amount sold label.
+            let constraintConstant = daysLeftLeftConstraint.constant
+            daysLeftLeftConstraint.isActive = false
+            daysLeftCount.snp.makeConstraints { make in
+                make.left.equalTo(amountSoldLabel.snp.right).offset(constraintConstant)
+            }
+        } else {
+            amountToGoCount.text = "\(12 - Int(product.amountPurchased))"
+        }
+        daysLeftCount.text = "5"
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {

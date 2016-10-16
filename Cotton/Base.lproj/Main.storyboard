@@ -180,30 +180,122 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TJr-PQ-neY">
-                                        <rect key="frame" x="8" y="531" width="359" height="11"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TJr-PQ-neY">
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="11" id="JzP-kD-JGe"/>
+                                        </constraints>
                                     </view>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0B2-gj-lbb">
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="139" id="lmw-Pw-hN8"/>
+                                        </constraints>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="11"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Count" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PWs-gv-6Xg">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="20" id="LZJ-KM-m49"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="9"/>
+                                        <color key="textColor" red="0.95875769853591919" green="0.38915911316871643" blue="0.32416272163391113" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SOLD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6CX-8V-zhk">
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="9"/>
+                                        <color key="textColor" red="0.19595640897750854" green="0.19613614678382874" blue="0.19598421454429626" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Count" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gns-Qn-buE">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="20" id="nku-ff-yyJ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="9"/>
+                                        <color key="textColor" red="0.95875769850000003" green="0.38915911320000002" blue="0.32416272159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MORE TO GO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jbT-zC-Rxw">
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="9"/>
+                                        <color key="textColor" red="0.195956409" green="0.19613614679999999" blue="0.1959842145" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Count" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qhl-rH-FwB">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="20" id="Prl-pv-7vD"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="9"/>
+                                        <color key="textColor" red="0.95875769850000003" green="0.38915911320000002" blue="0.32416272159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DAYS LEFT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r2h-ow-pvh">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="49" id="KFH-uK-ozv"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="9"/>
+                                        <color key="textColor" red="0.195956409" green="0.19613614679999999" blue="0.1959842145" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TAGGED:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jfX-03-LWO">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="54" id="Lkj-rr-jVt"/>
+                                            <constraint firstAttribute="height" constant="21" id="pw6-te-oAM"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MYTHOLOGY, BIRD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cE8-5l-KHj">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="Vl8-uJ-f72"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+                                        <color key="textColor" red="0.95193487405776978" green="0.38912978768348694" blue="0.32416939735412598" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="TJr-PQ-neY" secondAttribute="trailing" constant="8" id="015-6e-6y6"/>
+                                    <constraint firstItem="PWs-gv-6Xg" firstAttribute="top" secondItem="TJr-PQ-neY" secondAttribute="bottom" constant="5" id="4cu-ux-8sr"/>
                                     <constraint firstItem="97I-Wr-EFV" firstAttribute="leading" secondItem="pFy-oS-Mu5" secondAttribute="leading" constant="8" id="7Ay-tO-7NH"/>
                                     <constraint firstItem="dSD-cb-FuD" firstAttribute="leading" secondItem="edj-97-9R6" secondAttribute="trailing" constant="-16" id="Bh7-aT-yFt"/>
+                                    <constraint firstItem="6CX-8V-zhk" firstAttribute="top" secondItem="TJr-PQ-neY" secondAttribute="bottom" constant="5" id="G2U-jX-rf8"/>
+                                    <constraint firstItem="Qhl-rH-FwB" firstAttribute="leading" secondItem="jbT-zC-Rxw" secondAttribute="trailing" constant="10" id="Gi9-Pq-qNA"/>
                                     <constraint firstItem="edj-97-9R6" firstAttribute="top" secondItem="9AF-GZ-bLZ" secondAttribute="bottom" constant="7" id="HXM-dN-iv6"/>
                                     <constraint firstAttribute="trailing" secondItem="97I-Wr-EFV" secondAttribute="trailing" constant="8" id="Iio-yO-Bmo"/>
+                                    <constraint firstItem="jfX-03-LWO" firstAttribute="leading" secondItem="pFy-oS-Mu5" secondAttribute="leading" constant="8" id="Ipw-dp-AUw"/>
+                                    <constraint firstItem="TJr-PQ-neY" firstAttribute="leading" secondItem="pFy-oS-Mu5" secondAttribute="leading" constant="8" id="JGf-dl-61R"/>
                                     <constraint firstItem="dSD-cb-FuD" firstAttribute="top" secondItem="9AF-GZ-bLZ" secondAttribute="bottom" constant="7" id="JsV-Gq-GrK"/>
+                                    <constraint firstItem="cE8-5l-KHj" firstAttribute="leading" secondItem="jfX-03-LWO" secondAttribute="trailing" constant="5" id="Lpb-e9-LJQ"/>
+                                    <constraint firstItem="cE8-5l-KHj" firstAttribute="top" secondItem="0B2-gj-lbb" secondAttribute="bottom" constant="8" id="Msq-Kb-b4v"/>
+                                    <constraint firstItem="r2h-ow-pvh" firstAttribute="top" secondItem="TJr-PQ-neY" secondAttribute="bottom" constant="5" id="NdD-vo-xkE"/>
+                                    <constraint firstItem="TJr-PQ-neY" firstAttribute="top" secondItem="97I-Wr-EFV" secondAttribute="bottom" constant="9" id="RA2-rp-KPU"/>
+                                    <constraint firstItem="r2h-ow-pvh" firstAttribute="leading" secondItem="Qhl-rH-FwB" secondAttribute="trailing" constant="-1" id="RIQ-E3-DNN"/>
+                                    <constraint firstItem="jbT-zC-Rxw" firstAttribute="top" secondItem="TJr-PQ-neY" secondAttribute="bottom" constant="5" id="UgG-GA-6AV"/>
                                     <constraint firstItem="JC7-35-qpi" firstAttribute="leading" secondItem="pFy-oS-Mu5" secondAttribute="leading" constant="8" id="V2w-FO-PQ1"/>
+                                    <constraint firstItem="0B2-gj-lbb" firstAttribute="top" secondItem="PWs-gv-6Xg" secondAttribute="bottom" constant="9.5" id="XAQ-dE-gfb"/>
                                     <constraint firstItem="9AF-GZ-bLZ" firstAttribute="centerX" secondItem="pFy-oS-Mu5" secondAttribute="centerX" id="Zoj-z4-tes"/>
                                     <constraint firstItem="97I-Wr-EFV" firstAttribute="top" secondItem="JC7-35-qpi" secondAttribute="bottom" constant="19" id="adc-u3-zbv"/>
+                                    <constraint firstItem="jbT-zC-Rxw" firstAttribute="leading" secondItem="gns-Qn-buE" secondAttribute="trailing" constant="2" id="bJR-LE-aJn"/>
+                                    <constraint firstAttribute="trailing" secondItem="cE8-5l-KHj" secondAttribute="trailing" constant="8" id="byi-u0-xo7"/>
                                     <constraint firstAttribute="trailing" secondItem="JC7-35-qpi" secondAttribute="trailing" constant="8" id="cSp-ip-Bux"/>
+                                    <constraint firstItem="gns-Qn-buE" firstAttribute="leading" secondItem="6CX-8V-zhk" secondAttribute="trailing" constant="10" id="dw9-TF-fAZ"/>
                                     <constraint firstItem="JC7-35-qpi" firstAttribute="top" secondItem="2th-je-ekV" secondAttribute="bottom" constant="8.5" id="fpb-HC-EuZ"/>
+                                    <constraint firstItem="jfX-03-LWO" firstAttribute="top" secondItem="0B2-gj-lbb" secondAttribute="bottom" constant="8" id="gIF-t5-UW1"/>
                                     <constraint firstAttribute="trailing" secondItem="9AF-GZ-bLZ" secondAttribute="trailing" id="izh-wr-NGJ"/>
+                                    <constraint firstItem="6CX-8V-zhk" firstAttribute="leading" secondItem="PWs-gv-6Xg" secondAttribute="trailing" constant="1" id="kIn-P9-d3Y"/>
                                     <constraint firstItem="edj-97-9R6" firstAttribute="leading" secondItem="pFy-oS-Mu5" secondAttribute="leading" constant="33" id="kWP-vQ-8pg"/>
+                                    <constraint firstItem="0B2-gj-lbb" firstAttribute="leading" secondItem="pFy-oS-Mu5" secondAttribute="leading" constant="8" id="lbF-qr-PX9"/>
                                     <constraint firstAttribute="trailing" secondItem="2th-je-ekV" secondAttribute="trailing" constant="33" id="loo-4G-BQm"/>
+                                    <constraint firstAttribute="trailing" secondItem="0B2-gj-lbb" secondAttribute="trailing" constant="8" id="ngs-GY-2Hi"/>
                                     <constraint firstItem="2th-je-ekV" firstAttribute="top" secondItem="9AF-GZ-bLZ" secondAttribute="bottom" constant="7" id="onc-mt-dtu"/>
+                                    <constraint firstItem="gns-Qn-buE" firstAttribute="top" secondItem="TJr-PQ-neY" secondAttribute="bottom" constant="5" id="pEC-r6-uck"/>
+                                    <constraint firstItem="Qhl-rH-FwB" firstAttribute="top" secondItem="TJr-PQ-neY" secondAttribute="bottom" constant="5" id="ray-ya-xwo"/>
                                     <constraint firstItem="9AF-GZ-bLZ" firstAttribute="leading" secondItem="pFy-oS-Mu5" secondAttribute="leading" id="rzg-NT-B13"/>
                                     <constraint firstAttribute="bottom" secondItem="9AF-GZ-bLZ" secondAttribute="bottom" constant="624" id="tcn-u6-rTz"/>
                                     <constraint firstItem="9AF-GZ-bLZ" firstAttribute="top" secondItem="pFy-oS-Mu5" secondAttribute="top" constant="-2" id="u60-0g-BNU"/>
+                                    <constraint firstItem="PWs-gv-6Xg" firstAttribute="leading" secondItem="pFy-oS-Mu5" secondAttribute="leading" constant="8" id="wSZ-Nc-Tc2"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -219,7 +311,14 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="1000"/>
                     <connections>
+                        <outlet property="amountSoldCount" destination="PWs-gv-6Xg" id="wyE-jN-Aj3"/>
+                        <outlet property="amountSoldLabel" destination="6CX-8V-zhk" id="xRT-L5-Y1Z"/>
+                        <outlet property="amountToGoCount" destination="gns-Qn-buE" id="Owf-8x-aZx"/>
+                        <outlet property="amountToGoLabel" destination="jbT-zC-Rxw" id="enF-gc-9Gq"/>
                         <outlet property="colorSwitcherContainer" destination="JC7-35-qpi" id="g0e-0F-dga"/>
+                        <outlet property="daysLeftCount" destination="Qhl-rH-FwB" id="xDw-ka-rHl"/>
+                        <outlet property="daysLeftLabel" destination="r2h-ow-pvh" id="jC4-fX-54q"/>
+                        <outlet property="daysLeftLeftConstraint" destination="Gi9-Pq-qNA" id="a1Z-wu-UWV"/>
                         <outlet property="progressViewContainer" destination="TJr-PQ-neY" id="38s-xf-XRN"/>
                         <outlet property="scrollView" destination="pFy-oS-Mu5" id="2Me-eM-KRk"/>
                         <outlet property="shirtImageView" destination="9AF-GZ-bLZ" id="P85-N6-gs2"/>
