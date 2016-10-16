@@ -267,7 +267,7 @@
                                             <constraint firstAttribute="width" secondItem="kTQ-rW-6EG" secondAttribute="height" multiplier="1:1" id="Y1V-bJ-SzS"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bfF-BX-Ffh">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bfF-BX-Ffh" customClass="TileView" customModule="Cotton" customModuleProvider="target">
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="bfF-BX-Ffh" secondAttribute="height" multiplier="1:1" id="0tF-6O-4Z9"/>
@@ -358,7 +358,7 @@
                     <connections>
                         <outlet property="amountSoldCount" destination="PWs-gv-6Xg" id="wyE-jN-Aj3"/>
                         <outlet property="amountSoldLabel" destination="6CX-8V-zhk" id="xRT-L5-Y1Z"/>
-                        <outlet property="amountSoldTile" destination="bfF-BX-Ffh" id="LW9-O8-H3p"/>
+                        <outlet property="amountSoldTile" destination="bfF-BX-Ffh" id="Vo5-z7-zHR"/>
                         <outlet property="amountToGoCount" destination="gns-Qn-buE" id="Owf-8x-aZx"/>
                         <outlet property="amountToGoLabel" destination="jbT-zC-Rxw" id="enF-gc-9Gq"/>
                         <outlet property="colorSwitcherContainer" destination="JC7-35-qpi" id="g0e-0F-dga"/>

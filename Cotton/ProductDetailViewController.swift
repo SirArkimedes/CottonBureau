@@ -28,9 +28,11 @@ class ProductDetailViewController: UIViewController {
     
     @IBOutlet weak var daysLeftLeftConstraint: NSLayoutConstraint!
     
-    @IBOutlet weak var amountSoldTile: UIView!
+    @IBOutlet weak var amountSoldTile: TileView!
     
     private var progressBar:FatRoundProgressView!
+    
+    // MARK: - View Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +42,47 @@ class ProductDetailViewController: UIViewController {
         shirtImageView.image = product.fullImage
         
         // Setup type switcher
+        createTypeSelector()
+        
+        shirtNameLabel.text = product.shirtName
+        
+        // Progress Bar
+        progressBar = FatRoundProgressView()
+        progressViewContainer.addSubview(progressBar)
+        progressBar.snp.makeConstraints { make in
+            make.left.right.top.bottom.equalTo(progressViewContainer)
+        }
+        
+        // Amount sold - Amount to go - Days Left
+        amountSoldCount.text = "\(Int(product.amountPurchased))"
+        if product.amountPurchased >= 12.0 {
+            amountToGoCount.isHidden = true
+            amountToGoLabel.isHidden = true
+            
+            // Redo the constraints to move the label over to the amount sold label.
+            let constraintConstant = daysLeftLeftConstraint.constant
+            daysLeftLeftConstraint.isActive = false
+            daysLeftCount.snp.makeConstraints { make in
+                make.left.equalTo(amountSoldLabel.snp.right).offset(constraintConstant)
+            }
+        } else {
+            amountToGoCount.text = "\(12 - Int(product.amountPurchased))"
+        }
+        daysLeftCount.text = "5"
+        
+        amountSoldTile.amountSold = Int(product.amountPurchased)
+        amountSoldTile.type = .AmountSold
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        progressBar.progress = product.amountPurchased / product.amountTillPrint
+    }
+    
+    // MARK: - Creation
+    
+    private func createTypeSelector() {
         let buttonSpacing = 15.0
         let typeBoxSize = 35.0
         if product.hasTypes.count % 2 == 0 {
@@ -196,49 +239,8 @@ class ProductDetailViewController: UIViewController {
                 previousButton = button
                 i += 1
             }
-
-        }
-        
-        shirtNameLabel.text = product.shirtName
-        
-        // Progress Bar
-        progressBar = FatRoundProgressView()
-        progressViewContainer.addSubview(progressBar)
-        progressBar.snp.makeConstraints { make in
-            make.left.right.top.bottom.equalTo(progressViewContainer)
-        }
-        
-        // Amount sold - Amount to go - Days Left
-        amountSoldCount.text = "\(Int(product.amountPurchased))"
-        if product.amountPurchased >= 12.0 {
-            amountToGoCount.isHidden = true
-            amountToGoLabel.isHidden = true
             
-            // Redo the constraints to move the label over to the amount sold label.
-            let constraintConstant = daysLeftLeftConstraint.constant
-            daysLeftLeftConstraint.isActive = false
-            daysLeftCount.snp.makeConstraints { make in
-                make.left.equalTo(amountSoldLabel.snp.right).offset(constraintConstant)
-            }
-        } else {
-            amountToGoCount.text = "\(12 - Int(product.amountPurchased))"
         }
-        daysLeftCount.text = "5"
-        
-        let tile = TileView()
-        tile.amountSold = Int(product.amountPurchased)
-        tile.type = .AmountSold
-        view.addSubview(tile)
-        tile.snp.makeConstraints { make in
-            make.left.right.equalTo(amountSoldTile)
-            make.top.bottom.equalTo(amountSoldTile)
-        }
-        
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        progressBar.progress = product.amountPurchased / product.amountTillPrint
     }
     
     // MARK: - Actions

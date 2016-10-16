@@ -48,19 +48,6 @@ class TileView: UIView {
     var shareTypes:[String] = []
     var location = ""
     
-    init() {
-        super.init(frame: .zero)
-        build()
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    private func build() {
-        backgroundColor = #colorLiteral(red: 0.1333333333, green: 0.1326085031, blue: 0.1326085031, alpha: 1)
-    }
-    
     // MARK: - Build for type
     
     private func buildCountDownTimer() {
@@ -96,7 +83,7 @@ class TileView: UIView {
         countLabel.textAlignment = .center
         addSubview(countLabel)
         countLabel.snp.makeConstraints { make in
-            make.left.right.equalTo(self)
+            make.left.right.equalTo(soldLabel)
             make.top.equalTo(container)
             make.bottom.equalTo(soldLabel.snp.top)
         }
