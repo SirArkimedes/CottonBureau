@@ -28,6 +28,8 @@ class ProductDetailViewController: UIViewController {
     
     @IBOutlet weak var daysLeftLeftConstraint: NSLayoutConstraint!
     
+    @IBOutlet weak var amountSoldTile: UIView!
+    
     private var progressBar:FatRoundProgressView!
     
     override func viewDidLoad() {
@@ -222,6 +224,15 @@ class ProductDetailViewController: UIViewController {
             amountToGoCount.text = "\(12 - Int(product.amountPurchased))"
         }
         daysLeftCount.text = "5"
+        
+        let tile = TileView()
+        tile.amountSold = Int(product.amountPurchased)
+        tile.type = .AmountSold
+        view.addSubview(tile)
+        tile.snp.makeConstraints { make in
+            make.left.right.equalTo(amountSoldTile)
+            make.top.bottom.equalTo(amountSoldTile)
+        }
         
     }
     
