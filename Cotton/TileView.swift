@@ -291,11 +291,12 @@ class TileView: UIView {
         authorLabel.textColor = #colorLiteral(red: 0.9587576985, green: 0.3891591132, blue: 0.3241627216, alpha: 1)
         authorLabel.font = UIFont(name: "Helvetica", size: 20)
         authorLabel.textAlignment = .center
+        authorLabel.numberOfLines = 2
         authorLabel.adjustsFontSizeToFitWidth = true
         textContainer.addSubview(authorLabel)
         authorLabel.snp.makeConstraints { make in
-            make.left.equalTo(textContainer).offset(5)
-            make.right.equalTo(textContainer).offset(-5)
+            make.left.equalTo(textContainer).offset(10)
+            make.right.equalTo(textContainer).offset(-10)
             make.top.equalTo(textContainer)
         }
         
@@ -321,9 +322,11 @@ class TileView: UIView {
         locationLabel.font = UIFont(name: "Helvetica Light", size: 10)
         locationLabel.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         locationLabel.textAlignment = .center
+        locationLabel.adjustsFontSizeToFitWidth = true
         textContainer.addSubview(locationLabel)
         locationLabel.snp.makeConstraints { make in
-            make.left.right.equalTo(textContainer)
+            make.left.equalTo(textContainer).offset(10)
+            make.right.equalTo(textContainer).offset(-10)
             make.top.equalTo(socialMedia.snp.bottom).offset(10)
             make.bottom.equalTo(textContainer)
         }
