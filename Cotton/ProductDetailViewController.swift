@@ -87,7 +87,7 @@ class ProductDetailViewController: UIViewController {
         
         authorDetailsTile.type = .AuthorNameAndShare
         authorDetailsTile.authorName = product.authorName
-        authorDetailsTile.location = "ORLANDO, FLORIDA"
+        authorDetailsTile.location = product.authorLocation
         
     }
     

@@ -31,18 +31,18 @@ class MainMenuViewController: UIViewController, UICollectionViewDelegate, UIColl
 
         let types:[TypeAndColor] = [.TNavy, .TBlack, .TankIndigo, .TankBlack, .HoodieBlue, .Detail]
         tableData = [
-            Product(detailImage: "Code", shirtName: "Design In Code", authorName: "Cat Noone", authorImage: "DesignInCodeAuthor", amountPurchased: 16, hasTypes: types),
-            Product(detailImage: "Cubic", shirtName: "Cubical", authorName: "Daniel Sutton", authorImage: "CubicalAuthor", amountPurchased: 10, hasTypes: types),
-            Product(detailImage: "MacDaddy", shirtName: "Mac Daddy", authorName: "Lance Jones", authorImage: "MacDaddyAuthor", amountPurchased: 19, hasTypes: types),
-            Product(detailImage: "Phoenix", shirtName: "Rise Again", authorName: "Ben Stafford", authorImage: "RiseAgainAuthor", amountPurchased: 1, hasTypes: types),
-            Product(detailImage: "SanFran", shirtName: "San Fransokyo", authorName: "The Man and the Mouse", authorImage: "SanFransokyoAuthor", amountPurchased: 166, hasTypes: types),
-            Product(detailImage: "Solar", shirtName: "Pale Blue Dot", authorName: "Marian Mraz", authorImage: "PaleBlueDotAuthor", amountPurchased: 2, hasTypes: types),
-            Product(detailImage: "Code", shirtName: "Design In Code", authorName: "Cat Noone", authorImage: "DesignInCodeAuthor", amountPurchased: 7, hasTypes: types),
-            Product(detailImage: "Cubic", shirtName: "Cubical", authorName: "Daniel Sutton", authorImage: "CubicalAuthor", amountPurchased: 11, hasTypes: types),
-            Product(detailImage: "MacDaddy", shirtName: "Mac Daddy", authorName: "Lance Jones", authorImage: "MacDaddyAuthor", amountPurchased: 15, hasTypes: types),
-            Product(detailImage: "Phoenix", shirtName: "Rise Again", authorName: "Ben Stafford", authorImage: "RiseAgainAuthor", amountPurchased: 6, hasTypes: types),
-            Product(detailImage: "SanFran", shirtName: "San Fransokyo", authorName: "The Man and the Mouse", authorImage: "SanFransokyoAuthor", amountPurchased: 0, hasTypes: types),
-            Product(detailImage: "Solar", shirtName: "Pale Blue Dot", authorName: "Marian Mraz", authorImage: "PaleBlueDotAuthor", amountPurchased: 10, hasTypes: types)
+            Product(detailImage: "Code", shirtName: "Design In Code", authorName: "Cat Noone", authorImage: "DesignInCodeAuthor", authorLocation: "NEW JERSEY", amountPurchased: 16, hasTypes: types),
+            Product(detailImage: "Cubic", shirtName: "Cubical", authorName: "Daniel Sutton", authorImage: "CubicalAuthor", authorLocation: "CHARLOTTE, NC", amountPurchased: 10, hasTypes: types),
+            Product(detailImage: "MacDaddy", shirtName: "Mac Daddy", authorName: "Lance Jones", authorImage: "MacDaddyAuthor", authorLocation: "DALLAS, TX", amountPurchased: 19, hasTypes: types),
+            Product(detailImage: "Phoenix", shirtName: "Rise Again", authorName: "Ben Stafford", authorImage: "RiseAgainAuthor", authorLocation: "COLUMBUS, OH", amountPurchased: 1, hasTypes: types),
+            Product(detailImage: "SanFran", shirtName: "San Fransokyo", authorName: "The Man and the Mouse", authorImage: "SanFransokyoAuthor", authorLocation: "CHICAGO, IL", amountPurchased: 166, hasTypes: types),
+            Product(detailImage: "Solar", shirtName: "Pale Blue Dot", authorName: "Marian Mraz", authorImage: "PaleBlueDotAuthor", authorLocation: "ZURICH, SWITZERLAND", amountPurchased: 2, hasTypes: types),
+            Product(detailImage: "Code", shirtName: "Design In Code", authorName: "Cat Noone", authorImage: "DesignInCodeAuthor", authorLocation: "NEW JERSEY", amountPurchased: 7, hasTypes: types),
+            Product(detailImage: "Cubic", shirtName: "Cubical", authorName: "Daniel Sutton", authorImage: "CubicalAuthor", authorLocation: "CHARLOTTE, NC", amountPurchased: 11, hasTypes: types),
+            Product(detailImage: "MacDaddy", shirtName: "Mac Daddy", authorName: "Lance Jones", authorImage: "MacDaddyAuthor", authorLocation: "DALLAS, TX", amountPurchased: 15, hasTypes: types),
+            Product(detailImage: "Phoenix", shirtName: "Rise Again", authorName: "Ben Stafford", authorImage: "RiseAgainAuthor", authorLocation: "COLUMBUS, OH", amountPurchased: 6, hasTypes: types),
+            Product(detailImage: "SanFran", shirtName: "San Fransokyo", authorName: "The Man and the Mouse", authorImage: "SanFransokyoAuthor", authorLocation: "CHICAGO, IL", amountPurchased: 0, hasTypes: types),
+            Product(detailImage: "Solar", shirtName: "Pale Blue Dot", authorName: "Marian Mraz", authorImage: "PaleBlueDotAuthor", authorLocation: "ZURICH, SWITZERLAND", amountPurchased: 10, hasTypes: types)
         ]
     }
 
