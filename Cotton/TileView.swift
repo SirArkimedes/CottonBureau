@@ -43,21 +43,41 @@ class TileView: UIView {
     
     var days = 0 {
         didSet {
+            if days == 1 {
+                daysLabel.text = "DAY"
+            } else {
+                daysLabel.text = "DAYS"
+            }
             daysCount.text = "\(days)"
         }
     }
     var hours = 0 {
         didSet {
+            if hours == 1 {
+                hoursLabel.text = "HOUR"
+            } else {
+                hoursLabel.text = "HOURS"
+            }
             hoursCount.text = "\(hours)"
         }
     }
     var minutes = 0 {
         didSet {
+            if minutes == 1 {
+                minutesLabel.text = "MINUTE"
+            } else {
+                minutesLabel.text = "MINUTES"
+            }
             minutesCount.text = "\(minutes)"
         }
     }
     var seconds = 0 {
         didSet {
+            if seconds == 1 {
+                secondsLabel.text = "SECOND"
+            } else {
+                secondsLabel.text = "SECONDS"
+            }
             secondsCount.text = "\(seconds)"
         }
     }
@@ -148,7 +168,7 @@ class TileView: UIView {
             make.center.equalTo(daysContainer)
         }
         
-        daysLabel = smallTimeLabel(withTime: "DAYS")
+        daysLabel = smallTimeLabel()
         daysLabel.snp.makeConstraints { make in
             make.left.right.equalTo(daysSubContainer)
             make.bottom.equalTo(daysSubContainer)
@@ -170,7 +190,7 @@ class TileView: UIView {
             make.center.equalTo(hoursContainer)
         }
         
-        hoursLabel = smallTimeLabel(withTime: "HOURS")
+        hoursLabel = smallTimeLabel()
         hoursLabel.snp.makeConstraints { make in
             make.left.right.equalTo(hoursSubContainer)
             make.bottom.equalTo(hoursSubContainer)
@@ -192,7 +212,7 @@ class TileView: UIView {
             make.center.equalTo(minutesContainer)
         }
         
-        minutesLabel = smallTimeLabel(withTime: "MINUTES")
+        minutesLabel = smallTimeLabel()
         minutesLabel.snp.makeConstraints { make in
             make.left.right.equalTo(minutesSubContainer)
             make.bottom.equalTo(minutesSubContainer)
@@ -214,7 +234,7 @@ class TileView: UIView {
             make.center.equalTo(secondsContainer)
         }
         
-        secondsLabel = smallTimeLabel(withTime: "SECONDS")
+        secondsLabel = smallTimeLabel()
         secondsLabel.snp.makeConstraints { make in
             make.left.right.equalTo(secondsSubContainer)
             make.bottom.equalTo(secondsSubContainer)
@@ -335,10 +355,9 @@ class TileView: UIView {
     
     // MARK: - Helpers
     
-    private func smallTimeLabel(withTime time: String) -> UILabel {
+    private func smallTimeLabel() -> UILabel {
         
         let label = UILabel()
-        label.text = time
         label.font = UIFont(name: "Helvetica Bold", size: 8)
         label.textColor = #colorLiteral(red: 0.9587576985, green: 0.3891591132, blue: 0.3241627216, alpha: 1)
         label.textAlignment = .center

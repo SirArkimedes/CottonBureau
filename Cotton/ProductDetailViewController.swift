@@ -75,7 +75,7 @@ class ProductDetailViewController: UIViewController {
         
         timeLeftToSellTile.type = .CountDownTimer
         timeLeftToSellTile.days = 11
-        timeLeftToSellTile.hours = 21
+        timeLeftToSellTile.hours = 1
         timeLeftToSellTile.minutes = 30
         timeLeftToSellTile.seconds = 12
         
