@@ -22,7 +22,7 @@ class LandingTableViewController: UITableViewController, UINavigationControllerD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.navigationController!.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -45,31 +45,26 @@ class LandingTableViewController: UITableViewController, UINavigationControllerD
         self.performSegue(withIdentifier: SegueIdentifier.DetailVC.rawValue , sender: nil)
         
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        switch segue.identifier {
-        case SegueIdentifier.DetailVC.rawValue?:
-            self.navigationController!.delegate = self
-        default:
-            self.navigationController!.delegate = self
-        }
-    }
+
 
     func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         
-        if operation == UINavigationControllerOperation.push {
-            transition.operation = UINavigationControllerOperation.push
-            transition.duration = 0.40
-            transition.selectedCellFrame = self.selectedCellFrame
+        if fromVC == self || toVC == self {
             
-            return transition
-        }
-        
-        if operation == UINavigationControllerOperation.pop {
-            transition.operation = UINavigationControllerOperation.pop
-            transition.duration = 0.20
+            if operation == UINavigationControllerOperation.push {
+                transition.operation = UINavigationControllerOperation.push
+                transition.duration = 0.40
+                transition.selectedCellFrame = self.selectedCellFrame
+                
+                return transition
+            }
             
-            return transition
+            if operation == UINavigationControllerOperation.pop {
+                transition.operation = UINavigationControllerOperation.pop
+                transition.duration = 0.20
+                
+                return transition
+            }
         }
         
         return nil

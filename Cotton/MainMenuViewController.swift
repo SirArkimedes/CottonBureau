@@ -19,7 +19,6 @@ class MainMenuViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.delegate = nil
         
         navigationItem.titleView = UIImageView(image: UIImage(named: "whiteLogoSmall"))
         
