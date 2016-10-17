@@ -35,6 +35,8 @@ class ProductDetailViewController: UIViewController {
     
     private var progressBar:FatRoundProgressView!
     
+    private var timer:Timer!
+    
     // MARK: - View Lifecycle
     
     override func viewDidLoad() {
@@ -76,8 +78,8 @@ class ProductDetailViewController: UIViewController {
         timeLeftToSellTile.type = .CountDownTimer
         timeLeftToSellTile.days = 11
         timeLeftToSellTile.hours = 1
-        timeLeftToSellTile.minutes = 30
-        timeLeftToSellTile.seconds = 12
+        timeLeftToSellTile.minutes = 23
+        timeLeftToSellTile.seconds = 50
         
         amountSoldTile.type = .AmountSold
         amountSoldTile.amountSold = Int(product.amountPurchased)
@@ -88,6 +90,30 @@ class ProductDetailViewController: UIViewController {
         authorDetailsTile.type = .AuthorNameAndShare
         authorDetailsTile.authorName = product.authorName
         authorDetailsTile.location = product.authorLocation
+        
+        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
+            if self.timeLeftToSellTile.seconds > 0 {
+                self.timeLeftToSellTile.seconds -= 1
+            } else {
+                if self.timeLeftToSellTile.minutes > 0 {
+                    self.timeLeftToSellTile.seconds = 59
+                    self.timeLeftToSellTile.minutes -= 1
+                } else {
+                    if self.timeLeftToSellTile.hours > 0 {
+                        self.timeLeftToSellTile.minutes = 59
+                        self.timeLeftToSellTile.seconds = 59
+                        self.timeLeftToSellTile.hours -= 1
+                    } else {
+                        if self.timeLeftToSellTile.days > 0 {
+                            self.timeLeftToSellTile.hours = 23
+                            self.timeLeftToSellTile.minutes = 59
+                            self.timeLeftToSellTile.seconds = 59
+                            self.timeLeftToSellTile.days -= 1
+                        }
+                    }
+                }
+            }
+        }
         
     }
     
