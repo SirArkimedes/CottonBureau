@@ -69,9 +69,20 @@ class TileView: UIView {
     var authorImage:UIImage!
     
     // Author Name and Share
-    var authorName = ""
+    private var authorLabel:UILabel!
+    private var locationLabel:UILabel!
+    
+    var authorName = "" {
+        didSet {
+            authorLabel.text = "\(authorName)"
+        }
+    }
     var shareTypes:[String] = []
-    var location = ""
+    var location = "" {
+        didSet {
+            locationLabel.text = "\(location)"
+        }
+    }
     
     // MARK: - Build for type
     
@@ -247,6 +258,55 @@ class TileView: UIView {
     }
     
     private func buildAuthorNameAndShare() {
+        
+        backgroundColor = #colorLiteral(red: 0.1335069537, green: 0.133641988, blue: 0.1335278749, alpha: 1)
+        
+        let textContainer = UIView()
+        addSubview(textContainer)
+        textContainer.snp.makeConstraints { make in
+            make.left.right.equalTo(self)
+            make.center.equalTo(self)
+        }
+        
+        authorLabel = UILabel()
+        authorLabel.textColor = #colorLiteral(red: 0.9587576985, green: 0.3891591132, blue: 0.3241627216, alpha: 1)
+        authorLabel.font = UIFont(name: "Helvetica", size: 20)
+        authorLabel.textAlignment = .center
+        textContainer.addSubview(authorLabel)
+        authorLabel.snp.makeConstraints { make in
+            make.left.right.equalTo(textContainer)
+            make.top.equalTo(textContainer)
+        }
+        
+        let line = UIView()
+        line.backgroundColor = #colorLiteral(red: 0.2683390379, green: 0.2685706615, blue: 0.2683749199, alpha: 1)
+        textContainer.addSubview(line)
+        line.snp.makeConstraints { make in
+            make.top.equalTo(authorLabel.snp.bottom).offset(10)
+            make.centerX.equalTo(authorLabel)
+            make.height.equalTo(1)
+            make.width.equalTo(30)
+        }
+        
+        let socialMedia = UIImageView()
+        socialMedia.image = UIImage(named: "subShareLogo")
+        textContainer.addSubview(socialMedia)
+        socialMedia.snp.makeConstraints { make in
+            make.top.equalTo(line.snp.bottom).offset(10)
+            make.centerX.equalTo(line)
+        }
+        
+        locationLabel = UILabel()
+        locationLabel.font = UIFont(name: "Helvetica Light", size: 10)
+        locationLabel.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        locationLabel.textAlignment = .center
+        textContainer.addSubview(locationLabel)
+        locationLabel.snp.makeConstraints { make in
+            make.left.right.equalTo(textContainer)
+            make.top.equalTo(socialMedia.snp.bottom).offset(10)
+            make.bottom.equalTo(textContainer)
+        }
+        
     }
     
     // MARK: - Helpers

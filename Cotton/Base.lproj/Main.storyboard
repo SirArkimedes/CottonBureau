@@ -279,7 +279,7 @@
                                             <constraint firstAttribute="width" secondItem="nzW-BH-53o" secondAttribute="height" multiplier="1:1" id="iuu-DM-wGZ"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vtl-Dd-TAO">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vtl-Dd-TAO" customClass="TileView" customModule="Cotton" customModuleProvider="target">
                                         <color key="backgroundColor" red="0.97451201365728857" green="1" blue="0.22205597283510892" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Vtl-Dd-TAO" secondAttribute="height" multiplier="1:1" id="sPO-MX-6gV"/>
@@ -361,6 +361,7 @@
                         <outlet property="amountSoldTile" destination="bfF-BX-Ffh" id="Vo5-z7-zHR"/>
                         <outlet property="amountToGoCount" destination="gns-Qn-buE" id="Owf-8x-aZx"/>
                         <outlet property="amountToGoLabel" destination="jbT-zC-Rxw" id="enF-gc-9Gq"/>
+                        <outlet property="authorDetailsTile" destination="Vtl-Dd-TAO" id="0lu-17-DVg"/>
                         <outlet property="colorSwitcherContainer" destination="JC7-35-qpi" id="g0e-0F-dga"/>
                         <outlet property="daysLeftCount" destination="Qhl-rH-FwB" id="xDw-ka-rHl"/>
                         <outlet property="daysLeftLabel" destination="r2h-ow-pvh" id="jC4-fX-54q"/>
