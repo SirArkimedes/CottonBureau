@@ -28,6 +28,7 @@ class ProductDetailViewController: UIViewController {
     
     @IBOutlet weak var daysLeftLeftConstraint: NSLayoutConstraint!
     
+    @IBOutlet weak var timeLeftToSellTile: TileView!
     @IBOutlet weak var amountSoldTile: TileView!
     
     private var progressBar:FatRoundProgressView!
@@ -69,6 +70,12 @@ class ProductDetailViewController: UIViewController {
             amountToGoCount.text = "\(12 - Int(product.amountPurchased))"
         }
         daysLeftCount.text = "5"
+        
+        timeLeftToSellTile.type = .CountDownTimer
+        timeLeftToSellTile.days = 11
+        timeLeftToSellTile.hours = 21
+        timeLeftToSellTile.minutes = 30
+        timeLeftToSellTile.seconds = 12
         
         amountSoldTile.amountSold = Int(product.amountPurchased)
         amountSoldTile.type = .AmountSold

@@ -261,7 +261,7 @@
                                             <constraint firstAttribute="width" constant="94" id="Ohi-fC-itX"/>
                                         </constraints>
                                     </imageView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kTQ-rW-6EG">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kTQ-rW-6EG" customClass="TileView" customModule="Cotton" customModuleProvider="target">
                                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="kTQ-rW-6EG" secondAttribute="height" multiplier="1:1" id="Y1V-bJ-SzS"/>
@@ -369,6 +369,7 @@
                         <outlet property="scrollView" destination="pFy-oS-Mu5" id="2Me-eM-KRk"/>
                         <outlet property="shirtImageView" destination="9AF-GZ-bLZ" id="P85-N6-gs2"/>
                         <outlet property="shirtNameLabel" destination="97I-Wr-EFV" id="fmK-Nu-wQx"/>
+                        <outlet property="timeLeftToSellTile" destination="kTQ-rW-6EG" id="QY2-7d-Y2C"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fln-oP-Smu" userLabel="First Responder" sceneMemberID="firstResponder"/>
