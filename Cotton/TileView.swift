@@ -63,7 +63,13 @@ class TileView: UIView {
     }
     
     // Amount Sold
-    var amountSold = 0
+    private var amountSoldCount:UILabel!
+    
+    var amountSold = 0 {
+        didSet {
+            amountSoldCount.text = "\(amountSold)"
+        }
+    }
     
     // Author Image
     private var authorImageView:UIImageView!
@@ -246,13 +252,12 @@ class TileView: UIView {
             make.bottom.equalTo(container)
         }
         
-        let countLabel = UILabel()
-        countLabel.text = "\(amountSold)"
-        countLabel.font = UIFont(name: "Helvetica Light", size: 55)
-        countLabel.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-        countLabel.textAlignment = .center
-        addSubview(countLabel)
-        countLabel.snp.makeConstraints { make in
+        amountSoldCount = UILabel()
+        amountSoldCount.font = UIFont(name: "Helvetica Light", size: 55)
+        amountSoldCount.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        amountSoldCount.textAlignment = .center
+        addSubview(amountSoldCount)
+        amountSoldCount.snp.makeConstraints { make in
             make.left.right.equalTo(soldLabel)
             make.top.equalTo(container)
             make.bottom.equalTo(soldLabel.snp.top)

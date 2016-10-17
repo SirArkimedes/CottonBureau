@@ -79,8 +79,8 @@ class ProductDetailViewController: UIViewController {
         timeLeftToSellTile.minutes = 30
         timeLeftToSellTile.seconds = 12
         
-        amountSoldTile.amountSold = Int(product.amountPurchased)
         amountSoldTile.type = .AmountSold
+        amountSoldTile.amountSold = Int(product.amountPurchased)
         
         authorImageTile.type = .AuthorImage
         authorImageTile.authorImage = product.authorImage
