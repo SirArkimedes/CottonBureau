@@ -291,9 +291,11 @@ class TileView: UIView {
         authorLabel.textColor = #colorLiteral(red: 0.9587576985, green: 0.3891591132, blue: 0.3241627216, alpha: 1)
         authorLabel.font = UIFont(name: "Helvetica", size: 20)
         authorLabel.textAlignment = .center
+        authorLabel.adjustsFontSizeToFitWidth = true
         textContainer.addSubview(authorLabel)
         authorLabel.snp.makeConstraints { make in
-            make.left.right.equalTo(textContainer)
+            make.left.equalTo(textContainer).offset(5)
+            make.right.equalTo(textContainer).offset(-5)
             make.top.equalTo(textContainer)
         }
         
