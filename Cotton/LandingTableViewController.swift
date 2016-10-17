@@ -40,7 +40,7 @@ class LandingTableViewController: UITableViewController, UINavigationControllerD
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.selectedCellFrame = tableView.convert(tableView.cellForRow(at: indexPath)!.frame, to: tableView.superview)
+        self.selectedCellFrame = tableView.cellForRow(at: indexPath)!.frame
         
         self.performSegue(withIdentifier: SegueIdentifier.DetailVC.rawValue , sender: nil)
     }
@@ -48,9 +48,9 @@ class LandingTableViewController: UITableViewController, UINavigationControllerD
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {
         case SegueIdentifier.DetailVC.rawValue?:
-            self.navigationController?.delegate = self
+            self.navigationController!.delegate = self
         default:
-            self.navigationController?.delegate = self
+            self.navigationController!.delegate = self
         }
     }
 
