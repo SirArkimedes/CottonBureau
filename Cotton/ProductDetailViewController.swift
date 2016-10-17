@@ -30,6 +30,7 @@ class ProductDetailViewController: UIViewController {
     
     @IBOutlet weak var timeLeftToSellTile: TileView!
     @IBOutlet weak var amountSoldTile: TileView!
+    @IBOutlet weak var authorImageTile: TileView!
     @IBOutlet weak var authorDetailsTile: TileView!
     
     private var progressBar:FatRoundProgressView!
@@ -80,6 +81,9 @@ class ProductDetailViewController: UIViewController {
         
         amountSoldTile.amountSold = Int(product.amountPurchased)
         amountSoldTile.type = .AmountSold
+        
+        authorImageTile.type = .AuthorImage
+        authorImageTile.authorImage = product.authorImage
         
         authorDetailsTile.type = .AuthorNameAndShare
         authorDetailsTile.authorName = product.authorName

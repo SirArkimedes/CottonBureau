@@ -66,7 +66,13 @@ class TileView: UIView {
     var amountSold = 0
     
     // Author Image
-    var authorImage:UIImage!
+    private var authorImageView:UIImageView!
+    
+    var authorImage:UIImage! {
+        didSet {
+            authorImageView.image = authorImage
+        }
+    }
     
     // Author Name and Share
     private var authorLabel:UILabel!
@@ -255,6 +261,14 @@ class TileView: UIView {
     }
     
     private func buildAuthorImage() {
+        
+        authorImageView = UIImageView()
+        addSubview(authorImageView)
+        authorImageView.snp.makeConstraints { make in
+            make.left.right.equalTo(self)
+            make.top.bottom.equalTo(self)
+        }
+        
     }
     
     private func buildAuthorNameAndShare() {

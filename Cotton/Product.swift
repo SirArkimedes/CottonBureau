@@ -25,6 +25,7 @@ class Product: NSObject {
     var detailImage:UIImage
     var shirtName:String
     var authorName:String
+    var authorImage:UIImage
     var amountPurchased:CGFloat = 0.0
     
     var hasTypes:[TypeAndColor] = []
@@ -32,6 +33,7 @@ class Product: NSObject {
     init(detailImage:String,
          shirtName:String,
          authorName:String,
+         authorImage:String,
          amountPurchased:CGFloat,
          hasTypes:[TypeAndColor]) {
         
@@ -39,6 +41,7 @@ class Product: NSObject {
         self.detailImage = UIImage(named: detailImage)!
         self.shirtName = shirtName
         self.authorName = authorName
+        self.authorImage = UIImage(named: authorImage)!
         self.amountPurchased = amountPurchased
         self.hasTypes = hasTypes
     }
