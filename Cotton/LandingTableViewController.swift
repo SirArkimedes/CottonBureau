@@ -43,6 +43,7 @@ class LandingTableViewController: UITableViewController, UINavigationControllerD
         self.selectedCellFrame = tableView.cellForRow(at: indexPath)!.frame
         
         self.performSegue(withIdentifier: SegueIdentifier.DetailVC.rawValue , sender: nil)
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
