@@ -37,7 +37,8 @@ class CategorySwitcher: UIButton {
         
         detailButton = UIButton()
         detailButton?.setTitle("DETAIL", for: UIControlState.normal)
-        detailButton?.setTitleColor(#colorLiteral(red: 0.9568627451, green: 0.3882352941, blue: 0.3254901961, alpha: 1), for: UIControlState.normal)
+        detailButton?.setTitleColor(UIColor.white, for: UIControlState.normal)
+        detailButton?.backgroundColor = #colorLiteral(red: 0.9568627451, green: 0.3882352941, blue: 0.3254901961, alpha: 1)
         detailButton?.titleLabel?.font = UIFont(name: "Helvetica", size: 16.0)
         detailButton?.addTarget(self, action: #selector(detailButtonPressed), for: .touchUpInside)
         detailButton?.layer.borderWidth = 1.5
