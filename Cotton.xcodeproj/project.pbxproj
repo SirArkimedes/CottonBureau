@@ -107,13 +107,12 @@
 				60555ECA1D964B57000EAD2B /* Product.swift */,
 				4D9B62921D9776E100C72E1B /* Product Detail */,
 				60389DBB1D96E9220089CC6F /* CategorySwitcher.swift */,
-				609EB8E91DB475540050F66E /* LandingTableViewController.swift */,
+				4D5A15791E07CE6B009EA85C /* Landing View Controller */,
 				4D2D7F9D1D9618430043AFCA /* MainMenuViewController.swift */,
 				4D8C6F6C1D965A0F007F2D97 /* DetailCollectionViewCell.swift */,
 				4D2D7F821D9615710043AFCA /* Assets.xcassets */,
 				4D2D7F841D9615710043AFCA /* LaunchScreen.storyboard */,
 				4D2D7F871D9615710043AFCA /* Info.plist */,
-				609EB8EB1DB47ABB0050F66E /* ExpandingCellTransition.swift */,
 			);
 			path = Cotton;
 			sourceTree = "<group>";
@@ -149,6 +148,15 @@
 				4D9B62931D97833B00C72E1B /* FatRoundProgressView.swift */,
 			);
 			name = "Progress View";
+			sourceTree = "<group>";
+		};
+		4D5A15791E07CE6B009EA85C /* Landing View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				609EB8E91DB475540050F66E /* LandingTableViewController.swift */,
+				609EB8EB1DB47ABB0050F66E /* ExpandingCellTransition.swift */,
+			);
+			name = "Landing View Controller";
 			sourceTree = "<group>";
 		};
 		4D9B62921D9776E100C72E1B /* Product Detail */ = {
