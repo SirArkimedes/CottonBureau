@@ -16,6 +16,7 @@ class LandingTableViewController: UITableViewController, UINavigationControllerD
 
     @IBOutlet var landingTableView: UITableView!
     var selectedIndexPath: NSIndexPath?
+    let MinHeight: CGFloat = 100.0
     
     let transition = ExpandingCellTransition()
      var selectedCellFrame = CGRect.zero
@@ -32,8 +33,17 @@ class LandingTableViewController: UITableViewController, UINavigationControllerD
 
     // MARK: - Table view data source
     
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let tHeight = tableView.bounds.height
+        
+        let temp = tHeight/CGFloat(4)
+        
+        return temp > MinHeight ? temp : MinHeight
+    }
+    
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.layer.zPosition = CGFloat(landingTableView.numberOfSections - indexPath.row)
         cell.layer.shadowOpacity = 0.5
         cell.layer.shadowRadius = 1
         cell.layer.shadowOffset = CGSize.init(width: 0, height: 2)
