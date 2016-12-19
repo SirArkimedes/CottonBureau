@@ -16,6 +16,10 @@ class ProductDetailViewController: UIViewController {
     
     @IBOutlet weak var shirtImageView: UIImageView!
     @IBOutlet weak var colorSwitcherContainer: UIView!
+    
+    @IBOutlet weak var sizeSwitcher: UIButton!
+    @IBOutlet weak var buyButton: UIButton!
+    
     @IBOutlet weak var shirtNameLabel: UILabel!
     @IBOutlet weak var progressViewContainer: UIView!
     
@@ -51,6 +55,13 @@ class ProductDetailViewController: UIViewController {
         
         shirtNameLabel.text = product.shirtName
         
+        // Buy & Size
+        sizeSwitcher.layer.borderWidth = 1.0
+        sizeSwitcher.layer.borderColor = #colorLiteral(red: 0.9535269141, green: 0.3873531818, blue: 0.3249000311, alpha: 1).cgColor
+        
+        buyButton.layer.borderWidth = 1.0
+        buyButton.layer.borderColor = #colorLiteral(red: 0.9535269141, green: 0.3873531818, blue: 0.3249000311, alpha: 1).cgColor
+        
         // Progress Bar
         progressBar = FatRoundProgressView()
         progressViewContainer.addSubview(progressBar)
@@ -75,6 +86,7 @@ class ProductDetailViewController: UIViewController {
         }
         daysLeftCount.text = "5"
         
+        // Tile
         timeLeftToSellTile.type = .CountDownTimer
         timeLeftToSellTile.days = 11
         timeLeftToSellTile.hours = 1
@@ -298,7 +310,11 @@ class ProductDetailViewController: UIViewController {
                 }, completion: nil)
         }
     }
-
+    
+    @IBAction func wantsSizeChange(_ sender: UIButton) {
+        // Do sum
+    }
+    
     // MARK: - Helpers
     
     private func determineImage(index value: Int, button: UIButton) {
