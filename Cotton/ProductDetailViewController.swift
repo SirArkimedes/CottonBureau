@@ -312,7 +312,9 @@ class ProductDetailViewController: UIViewController {
     }
     
     @IBAction func wantsSizeChange(_ sender: UIButton) {
-        // Do sum
+        let vc = SizeChangeViewController()
+        vc.modalPresentationStyle = .overCurrentContext
+        present(vc, animated: false, completion: nil)
     }
     
     // MARK: - Helpers
