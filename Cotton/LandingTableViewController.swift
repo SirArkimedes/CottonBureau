@@ -34,7 +34,11 @@ class LandingTableViewController: UITableViewController, UINavigationControllerD
     
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        cell.separatorInset = UIEdgeInsets.zero
+        cell.layer.shadowOpacity = 0.5
+        cell.layer.shadowRadius = 1
+        cell.layer.shadowOffset = CGSize.init(width: 0, height: 2)
+        cell.layer.masksToBounds = false
+        cell.layer.shadowColor = UIColor.black.cgColor
         cell.layoutMargins = UIEdgeInsets.zero
         cell.preservesSuperviewLayoutMargins = false
     }
