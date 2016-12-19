@@ -7,7 +7,7 @@
 //
 
 // MARK: This was committed on Andrew Robinson's birthday.
-// MARK: Happy Birthday to him! 🎂
+// MARK: Happy Birthday to him! 🎂 (He also committed this part too. 😱)
 
 import UIKit
 
@@ -24,13 +24,11 @@ enum Sizes {
 
 class SizeChangeViewController: UIViewController {
     
-    private let topBottomSpace:CGFloat = 40.0
     private let cellSize:CGFloat = 120.0
+    private let cellColors:[UIColor] = [#colorLiteral(red: 0.9587576985, green: 0.3891591132, blue: 0.3241627216, alpha: 1), #colorLiteral(red: 0.8435037923, green: 0.3385226438, blue: 0.2836847006, alpha: 1), #colorLiteral(red: 0.7191483235, green: 0.2886151716, blue: 0.2418618371, alpha: 1), #colorLiteral(red: 0.6488553547, green: 0.2604045555, blue: 0.2182211138, alpha: 1), #colorLiteral(red: 0.5980741048, green: 0.2400245606, blue: 0.201142514, alpha: 1), #colorLiteral(red: 0.5472537922, green: 0.2196288887, blue: 0.1840507768, alpha: 1), #colorLiteral(red: 0.467312386, green: 0.1875460737, blue: 0.1571651195, alpha: 1), #colorLiteral(red: 0.3977616047, green: 0.1596333191, blue: 0.1337740064, alpha: 1)]
     
     // This should be controlled by the shirt.
-    var shirtSizes:[Sizes] = [.ExtraSmall, .Small, .Medium, .Large, .ExtraLarge, .DoubleLarge, .TripleLarge, .QuadrupleLarge]
-    
-    let cellColors:[UIColor] = [#colorLiteral(red: 0.9587576985, green: 0.3891591132, blue: 0.3241627216, alpha: 1), #colorLiteral(red: 0.8435037923, green: 0.3385226438, blue: 0.2836847006, alpha: 1), #colorLiteral(red: 0.7191483235, green: 0.2886151716, blue: 0.2418618371, alpha: 1), #colorLiteral(red: 0.6488553547, green: 0.2604045555, blue: 0.2182211138, alpha: 1), #colorLiteral(red: 0.5980741048, green: 0.2400245606, blue: 0.201142514, alpha: 1), #colorLiteral(red: 0.5472537922, green: 0.2196288887, blue: 0.1840507768, alpha: 1), #colorLiteral(red: 0.467312386, green: 0.1875460737, blue: 0.1571651195, alpha: 1), #colorLiteral(red: 0.3977616047, green: 0.1596333191, blue: 0.1337740064, alpha: 1)]
+    var shirtSizes:[Sizes] = [.Small, .Medium, .Large, .ExtraLarge, .DoubleLarge]
 
     private var container:UIView!
     private var sizeLabel:UILabel!
