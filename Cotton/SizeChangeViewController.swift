@@ -6,6 +6,9 @@
 //  Copyright © 2016 Masamune. All rights reserved.
 //
 
+// MARK: This was committed on Andrew Robinson's birthday.
+// MARK: Happy Birthday to him! 🎂
+
 import UIKit
 
 enum Sizes {
@@ -31,6 +34,8 @@ class SizeChangeViewController: UIViewController {
 
     private var container:UIView!
     private var sizeLabel:UILabel!
+    
+    // MARK: - Awake event
     
     override func viewDidLoad() {
         super.viewDidLoad()
