@@ -10,6 +10,9 @@ import UIKit
 
 enum SegueIdentifier: String {
     case DetailVC = "DetailVC"
+    case KidsVC = "KidsVC"
+    case FAQVC = "FAQVC"
+    case WallVC = "WallVC"
 }
 
 class LandingTableViewController: UITableViewController, UINavigationControllerDelegate {
@@ -44,6 +47,10 @@ class LandingTableViewController: UITableViewController, UINavigationControllerD
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         cell.layer.zPosition = CGFloat(landingTableView.numberOfSections - indexPath.row)
+//        let inverseOfCell = Int(landingTableView.numberOfSections - indexPath.row)
+//        let newindex = IndexPath.init(row: inverseOfCell, section: 0)
+//        let inverseCell = landingTableView.cellForRow(at: newindex)
+//        cell.selectedBackgroundView?.backgroundColor = inverseCell?.backgroundColor
         cell.layer.shadowOpacity = 0.5
         cell.layer.shadowRadius = 1
         cell.layer.shadowOffset = CGSize.init(width: 0, height: 2)
@@ -56,7 +63,19 @@ class LandingTableViewController: UITableViewController, UINavigationControllerD
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.selectedCellFrame = tableView.cellForRow(at: indexPath)!.frame
         
-        self.performSegue(withIdentifier: SegueIdentifier.DetailVC.rawValue , sender: nil)
+        
+        switch indexPath.row {
+        case 0:
+            self.performSegue(withIdentifier: SegueIdentifier.DetailVC.rawValue , sender: nil)
+        case 1:
+            self.performSegue(withIdentifier: SegueIdentifier.KidsVC.rawValue , sender: nil)
+        case 2:
+           self.performSegue(withIdentifier: SegueIdentifier.WallVC.rawValue , sender: nil)
+        case 3:
+            self.performSegue(withIdentifier: SegueIdentifier.FAQVC.rawValue , sender: nil)
+        default:
+            self.performSegue(withIdentifier: SegueIdentifier.DetailVC.rawValue , sender: nil)
+        }
         
     }
 
