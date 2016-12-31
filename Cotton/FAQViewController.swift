@@ -51,7 +51,7 @@ class FAQViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         cell.questionLabel.textColor = #colorLiteral(red: 0.9568627451, green: 0.3882352941, blue: 0.3215686275, alpha: 1)
         cell.questionLabel.font = cell.questionLabel.font.withSize(25)
         cell.questionLabel.text = types[indexPath.row].question
-        cell.answerLabel.text = types[indexPath.row].answer
+        cell.answerLabel.text = types[indexPath.row].answer	
         return cell
     }
     

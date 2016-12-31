@@ -306,7 +306,7 @@ class ProductDetailViewController: UIViewController {
                 }, completion: nil)
         } else {
             UIView.transition(with: shirtImageView, duration: 0.5, options: .transitionCrossDissolve, animations: {
-                self.shirtImageView.image = UIImage(named: "SanFranFull")!
+                self.shirtImageView.image = self.product.fullImage
                 }, completion: nil)
         }
     }
