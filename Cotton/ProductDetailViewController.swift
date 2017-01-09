@@ -314,6 +314,7 @@ class ProductDetailViewController: UIViewController {
     @IBAction func wantsSizeChange(_ sender: UIButton) {
         let vc = SizeChangeViewController()
         vc.modalPresentationStyle = .overCurrentContext
+        vc.sizeButton = self.sizeSwitcher
         present(vc, animated: false, completion: nil)
     }
     

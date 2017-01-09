@@ -27,6 +27,8 @@ class SizeChangeViewController: UIViewController {
     private let cellSize:CGFloat = 120.0
     private let cellColors:[UIColor] = [#colorLiteral(red: 0.9587576985, green: 0.3891591132, blue: 0.3241627216, alpha: 1), #colorLiteral(red: 0.8435037923, green: 0.3385226438, blue: 0.2836847006, alpha: 1), #colorLiteral(red: 0.7191483235, green: 0.2886151716, blue: 0.2418618371, alpha: 1), #colorLiteral(red: 0.6488553547, green: 0.2604045555, blue: 0.2182211138, alpha: 1), #colorLiteral(red: 0.5980741048, green: 0.2400245606, blue: 0.201142514, alpha: 1), #colorLiteral(red: 0.5472537922, green: 0.2196288887, blue: 0.1840507768, alpha: 1), #colorLiteral(red: 0.467312386, green: 0.1875460737, blue: 0.1571651195, alpha: 1), #colorLiteral(red: 0.3977616047, green: 0.1596333191, blue: 0.1337740064, alpha: 1)]
     
+    var sizeButton:UIButton?
+    
     // This should be controlled by the shirt.
     var shirtSizes:[Sizes] = [.Small, .Medium, .Large, .ExtraLarge, .DoubleLarge]
 
@@ -73,6 +75,8 @@ class SizeChangeViewController: UIViewController {
         let evenCell = UIButton()
         evenCell.addTarget(self, action: #selector(sizeSeleted(sender:)), for: .touchUpInside)
         evenCell.backgroundColor = cellColors[0]
+        evenCell.setTitle(evaluateTextForSize(size: shirtSizes[0]), for: .normal)
+        evenCell.titleLabel?.font = UIFont(name: "Helvetica-Light", size: 20)
         container.addSubview(evenCell)
         evenCell.snp.makeConstraints { make in
             make.left.equalTo(container)
@@ -80,32 +84,16 @@ class SizeChangeViewController: UIViewController {
             make.top.equalTo(container)
         }
         
-        let evenLabel = UILabel()
-        evenLabel.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-        evenLabel.text = evaluateTextForSize(size: shirtSizes[0])
-        evenLabel.font = UIFont(name: "Helvetica-Light", size: 20)
-        evenCell.addSubview(evenLabel)
-        evenLabel.snp.makeConstraints { make in
-            make.center.equalTo(evenCell)
-        }
-        
         let oddCell = UIButton()
         oddCell.addTarget(self, action: #selector(sizeSeleted(sender:)), for: .touchUpInside)
         oddCell.backgroundColor = cellColors[1]
+        oddCell.setTitle(evaluateTextForSize(size: shirtSizes[1]), for: .normal)
+        oddCell.titleLabel?.font = UIFont(name: "Helvetica-Light", size: 20)
         container.addSubview(oddCell)
         oddCell.snp.makeConstraints { make in
             make.right.equalTo(container)
             make.height.width.equalTo(cellSize)
             make.top.equalTo(container)
-        }
-        
-        let oddLabel = UILabel()
-        oddLabel.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-        oddLabel.text = evaluateTextForSize(size: shirtSizes[1])
-        oddLabel.font = UIFont(name: "Helvetica-Light", size: 20)
-        oddCell.addSubview(oddLabel)
-        oddLabel.snp.makeConstraints { make in
-            make.center.equalTo(oddCell)
         }
         
         var previousEvenCellTop = evenCell
@@ -115,6 +103,8 @@ class SizeChangeViewController: UIViewController {
             let cell = UIButton()
             cell.addTarget(self, action: #selector(sizeSeleted(sender:)), for: .touchUpInside)
             cell.backgroundColor = cellColors[value]
+            cell.setTitle(evaluateTextForSize(size: shirtSizes[value]), for: .normal)
+            cell.titleLabel?.font = UIFont(name: "Helvetica-Light", size: 20)
             container.addSubview(cell)
             if value == shirtSizes.count - 1 && shirtSizes.count % 2 != 0 {
                 cell.snp.makeConstraints { make in
@@ -136,15 +126,6 @@ class SizeChangeViewController: UIViewController {
                     make.top.equalTo(previousOddCellTop.snp.bottom)
                 }
                 previousOddCellTop = cell
-            }
-            
-            let label = UILabel()
-            label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-            label.text = evaluateTextForSize(size: shirtSizes[value])
-            label.font = UIFont(name: "Helvetica-Light", size: 20)
-            cell.addSubview(label)
-            label.snp.makeConstraints { make in
-                make.center.equalTo(cell)
             }
             
         }
@@ -174,6 +155,7 @@ class SizeChangeViewController: UIViewController {
     // MARK: - Button presses
     
     @objc private func sizeSeleted(sender: UIButton) {
+        sizeButton?.setTitle("Size: " + "\(sender.titleLabel!.text!)", for: .normal)
         touched()
     }
     
