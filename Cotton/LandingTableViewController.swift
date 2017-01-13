@@ -70,7 +70,7 @@ class LandingTableViewController: UITableViewController, UINavigationControllerD
         case 1:
             self.performSegue(withIdentifier: SegueIdentifier.KidsVC.rawValue , sender: nil)
         case 2:
-           self.performSegue(withIdentifier: SegueIdentifier.WallVC.rawValue , sender: nil)
+           self.performSegue(withIdentifier: SegueIdentifier.DetailVC.rawValue , sender: nil)
         case 3:
             self.performSegue(withIdentifier: SegueIdentifier.FAQVC.rawValue , sender: nil)
         default:

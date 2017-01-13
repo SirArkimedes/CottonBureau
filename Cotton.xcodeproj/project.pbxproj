@@ -19,6 +19,7 @@
 		4D47C8471E07886A00AA051A /* SizeChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D47C8461E07886A00AA051A /* SizeChangeViewController.swift */; };
 		4D8C6F6D1D965A0F007F2D97 /* DetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8C6F6C1D965A0F007F2D97 /* DetailCollectionViewCell.swift */; };
 		4D9B62941D97833B00C72E1B /* FatRoundProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9B62931D97833B00C72E1B /* FatRoundProgressView.swift */; };
+		600F83C61E27236F0052D2A0 /* KidsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600F83C51E27236F0052D2A0 /* KidsViewController.swift */; };
 		60389DBC1D96E9220089CC6F /* CategorySwitcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60389DBB1D96E9220089CC6F /* CategorySwitcher.swift */; };
 		60555ECB1D964B57000EAD2B /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60555ECA1D964B57000EAD2B /* Product.swift */; };
 		609EB8EA1DB475540050F66E /* LandingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609EB8E91DB475540050F66E /* LandingTableViewController.swift */; };
@@ -54,6 +55,7 @@
 		4D47C8461E07886A00AA051A /* SizeChangeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SizeChangeViewController.swift; sourceTree = "<group>"; };
 		4D8C6F6C1D965A0F007F2D97 /* DetailCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailCollectionViewCell.swift; sourceTree = "<group>"; };
 		4D9B62931D97833B00C72E1B /* FatRoundProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FatRoundProgressView.swift; sourceTree = "<group>"; };
+		600F83C51E27236F0052D2A0 /* KidsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KidsViewController.swift; sourceTree = "<group>"; };
 		60389DBB1D96E9220089CC6F /* CategorySwitcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategorySwitcher.swift; sourceTree = "<group>"; };
 		60555ECA1D964B57000EAD2B /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		609EB8E91DB475540050F66E /* LandingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingTableViewController.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				60D58CC11E14C1AB003392EC /* FAQ View Controller */,
 				4D5A15791E07CE6B009EA85C /* Landing View Controller */,
 				4D2D7F9D1D9618430043AFCA /* MainMenuViewController.swift */,
+				600F83C51E27236F0052D2A0 /* KidsViewController.swift */,
 				4D8C6F6C1D965A0F007F2D97 /* DetailCollectionViewCell.swift */,
 				4D2D7F821D9615710043AFCA /* Assets.xcassets */,
 				4D2D7F841D9615710043AFCA /* LaunchScreen.storyboard */,
@@ -366,6 +369,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D9B62941D97833B00C72E1B /* FatRoundProgressView.swift in Sources */,
+				600F83C61E27236F0052D2A0 /* KidsViewController.swift in Sources */,
 				60389DBC1D96E9220089CC6F /* CategorySwitcher.swift in Sources */,
 				4D3F12291DB352C70048D87F /* TileView.swift in Sources */,
 				4D2D7F9E1D9618430043AFCA /* MainMenuViewController.swift in Sources */,

@@ -23,6 +23,7 @@ class Product: NSObject {
     
     var fullImage:UIImage
     var detailImage:UIImage
+    var onesieImage:UIImage
     var shirtName:String
     var authorName:String
     var authorImage:UIImage
@@ -33,6 +34,7 @@ class Product: NSObject {
     
     init(detailImage:String,
          shirtName:String,
+         kidsTee:Bool? = false,
          authorName:String,
          authorImage:String,
          authorLocation:String,
@@ -42,6 +44,11 @@ class Product: NSObject {
         self.fullImage = UIImage(named: detailImage + "Full")!
         self.detailImage = UIImage(named: detailImage)!
         self.shirtName = shirtName
+        if kidsTee! {
+            self.onesieImage = UIImage(named: detailImage + "Onesie")!
+        } else {
+            self.onesieImage = UIImage(named: detailImage)!
+        }
         self.authorName = authorName
         self.authorImage = UIImage(named: authorImage)!
         self.authorLocation = authorLocation
